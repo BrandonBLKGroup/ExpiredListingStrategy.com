@@ -659,11 +659,34 @@
             };
             
             try {
+                // Save to Supabase
                 const { error } = await sb
                     .from('expired_listing_leads')
                     .insert(leadData);
                 
                 if (error) throw error;
+                
+                // Send email notification
+                const emailData = new FormData();
+                emailData.append('email', 'BrandonBLKGroup@Gmail.com');
+                emailData.append('subject', '🏚️ New Expired Listing Lead - ' + leadData.name);
+                emailData.append('message', `
+NEW EXPIRED LISTING LEAD
+
+Name: ${leadData.name}
+Email: ${leadData.email}
+Property Address: ${leadData.property_address}
+Timeline: ${leadData.timeline}
+Price Desired: ${leadData.price_desired}
+Pricing Analysis: ${leadData.pricing_analysis ? 'YES' : 'No'}
+
+Source: ExpiredListingStrategy.com
+                `);
+                
+                fetch('https://formsubmit.co/ajax/BrandonBLKGroup@Gmail.com', {
+                    method: 'POST',
+                    body: emailData
+                }).catch(err => console.error('Email send failed:', err));
                 
                 alert('Thank you! We\'ll email you the Expired Listing Strategy within 24 hours.');
                 document.getElementById('listing-form').reset();
