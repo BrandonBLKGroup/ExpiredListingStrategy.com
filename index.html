@@ -699,5 +699,30 @@ Source: ExpiredListingStrategy.com
             }
         });
     </script>
+
+    <!-- Analytics Tracking -->
+    <script>
+        // Track page view
+        (async function() {
+            try {
+                await fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/page_views', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.lc6A8RCUySU0Hn9MjPcR9rH1c8DjSj_A7MV8JuLvwik',
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.lc6A8RCUySU0Hn9MjPcR9rH1c8DjSj_A7MV8JuLvwik',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        domain: 'expiredlistingstrategy.com',
+                        page: window.location.pathname + window.location.hash,
+                        referrer: document.referrer || 'direct'
+                    })
+                });
+            } catch (err) {
+                console.error('Analytics tracking failed:', err);
+            }
+        })();
+    </script>
 </body>
 </html>
