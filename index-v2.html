@@ -300,6 +300,94 @@
             line-height: 1.8;
         }
         
+        /* Team Section */
+        .team-section {
+            padding: 80px 20px;
+            background: #000;
+        }
+        
+        .team-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .team-section h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #B8960C;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 30px 15px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .team-member:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .team-member-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(184, 150, 12, 0.15);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 300;
+            color: #B8960C;
+            border: 1px solid rgba(184, 150, 12, 0.3);
+        }
+        
+        .team-member h4 {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+        
+        .team-member p {
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .team-member .phone {
+            font-size: 13px;
+            font-weight: 400;
+            color: #B8960C;
+            text-transform: none;
+            margin-top: 10px;
+        }
+        
+        .team-member .phone a {
+            color: #B8960C;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .team-member .phone a:hover {
+            color: #8B7209;
+        }
+        
         /* Footer */
         .footer {
             padding: 40px 20px;
@@ -353,6 +441,11 @@
             
             .form-card {
                 padding: 30px 20px;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
         }
     </style>
@@ -465,6 +558,45 @@
                 <div class="why-card">
                     <h3>6 Months Wasted</h3>
                     <p>The average home sells in 28-35 days. So why did you sign a 180-day contract? Because it protects THEM, not you. We do 30 days. If we don't perform, you walk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-member-photo">BB</div>
+                    <h4>Brandon Bruning</h4>
+                    <p>Team Leader</p>
+                    <p class="phone"><a href="tel:+14798575994">(479) 857-5994</a></p>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-photo">AM</div>
+                    <h4>Amanda Mitchell</h4>
+                    <p>Realtor</p>
+                    <p class="phone"><a href="tel:+15012310732">(501) 231-0732</a></p>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-photo">SL</div>
+                    <h4>Shelley Lisko</h4>
+                    <p>Realtor</p>
+                    <p class="phone"><a href="tel:+15012496036">(501) 249-6036</a></p>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-photo">BL</div>
+                    <h4>Brad Lisko</h4>
+                    <p>Realtor</p>
+                    <p class="phone"><a href="tel:+15012490131">(501) 249-0131</a></p>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-photo">KC</div>
+                    <h4>Kevin Cloud</h4>
+                    <p>Realtor</p>
+                    <p class="phone"><a href="tel:+15012761332">(501) 276-1332</a></p>
                 </div>
             </div>
         </div>
