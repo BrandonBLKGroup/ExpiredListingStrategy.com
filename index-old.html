@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expired Listing Strategy - 3% Commission | The BLK Group</title>
+    <meta name="description" content="Your listing expired? Our 30 Day Expired Listing Strategy gets results. Real marketing. Regular updates. 3% commission. 500+ sellers helped.">
+    <link rel="canonical" href="https://expiredlistingstrategy.com">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Your House Didn't Sell. Now What? | The BLK Group">
+    <meta property="og:description" content="Another 6 months with the same strategy? Get our proven Expired Listing Strategy. 30 days. 3% commission. No cancellation fees.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://expiredlistingstrategy.com">
+    <meta property="og:image" content="https://expiredlistingstrategy.com/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://expiredlistingstrategy.com/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:image:alt" content="Expired Listing Strategy - The BLK Group">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your House Didn't Sell. Now What? | The BLK Group">
+    <meta name="twitter:description" content="Another 6 months with the same strategy? Get our proven Expired Listing Strategy. 30 days. 3% commission.">
+    <meta name="twitter:image" content="https://expiredlistingstrategy.com/og-image.jpg">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* LPT Banner */
+        .lpt-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 12px 0;
+            text-align: center;
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lpt-banner img {
+            height: 50px;
+            width: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://theblk.group/parallax-1-new.jpg') center center no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+            max-width: 900px;
+        }
+        
+        .hero-logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 200;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero .subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+        }
+        
+        .hero .tagline {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #B8960C;
+            margin-bottom: 50px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #B8960C;
+            color: #000;
+            padding: 18px 50px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #8B7209;
+        }
+        
+        /* Content Sections */
+        section {
+            position: relative;
+            background: #000;
+            z-index: 100;
+        }
+        
+        .parallax-section {
+            position: relative;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            padding: 120px 40px;
+        }
+        
+        .parallax-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .parallax-section .content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .problem-section {
+            background-image: url('https://theblk.group/parallax-3-new.jpg');
+        }
+        
+        .solution-section {
+            background-image: url('https://theblk.group/parallax-services.jpg');
+        }
+        
+        .stats-section {
+            background-image: url('https://theblk.group/hero-bg-new.jpg');
+        }
+        
+        .dark-section {
+            background: #000;
+            padding: 120px 40px;
+        }
+        
+        .dark-section .content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 48px;
+            font-weight: 200;
+            letter-spacing: 6px;
+            margin-bottom: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        h3 {
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            color: #B8960C;
+            text-transform: uppercase;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 64px;
+            font-weight: 200;
+            color: #B8960C;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .benefit-list {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #B8960C;
+        }
+        
+        .benefit-icon {
+            font-size: 32px;
+            margin-right: 20px;
+            color: #B8960C;
+        }
+        
+        .benefit-text h4 {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .benefit-text p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: #000;
+            padding: 120px 40px;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #B8960C;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 3px;
+        }
+        
+        .checkbox-group label {
+            text-transform: none;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            background: #B8960C;
+            color: #000;
+            padding: 18px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        
+        button[type="submit"]:hover {
+            background: #8B7209;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 60px 40px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        footer p {
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero-logo {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: 4px;
+            }
+            
+            .hero .subtitle {
+                font-size: 14px;
+            }
+            
+            .hero .tagline {
+                font-size: 18px;
+            }
+            
+            h2 {
+                font-size: 32px;
+                letter-spacing: 3px;
+            }
+            
+            h3 {
+                font-size: 24px;
+                letter-spacing: 2px;
+            }
+            
+            .stat-number {
+                font-size: 48px;
+            }
+            
+            .parallax-section,
+            .dark-section,
+            .form-section {
+                padding: 80px 20px;
+            }
+            
+            .form-container {
+                padding: 40px 30px;
+            }
+            
+            /* Disable parallax on mobile */
+            .hero,
+            .parallax-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LPT Realty Banner -->
+    <div class="lpt-banner">
+        <img src="https://theblk.group/lpt-logo.jpg" alt="LPT Realty">
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="blk-logo.png" alt="The BLK Group" class="hero-logo">
+            <h1>Your House Didn't Sell</h1>
+            <p class="subtitle">Now what?</p>
+            <p class="tagline">Another 6 months with the same strategy? Or do you want to explore the #1 real estate strategy in Central Arkansas?</p>
+            <a href="#get-strategy" class="cta-button">Get Your Free Strategy</a>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="parallax-section problem-section">
+        <div class="content">
+            <h2>Your Listing Expired. What Went Wrong?</h2>
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div class="stat-number">❌</div>
+                    <div class="stat-label">No Real Strategy</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">❌</div>
+                    <div class="stat-label">No Real Marketing</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">❌</div>
+                    <div class="stat-label">Just Listed & Waited 6 Months</div>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 20px; max-width: 800px; margin: 40px auto;">
+                Your agent listed your home online and waited. No aggressive marketing. No regular updates. No real strategy. Before you commit to another 6 months of the same approach, see the strategy that's made us #1 in Central Arkansas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why We're Different -->
+    <section class="dark-section">
+        <div class="content">
+            <h2>Why The BLK Group?</h2>
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div class="stat-number">#1</div>
+                    <div class="stat-label">Most Homes Sold in Central Arkansas (2025)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Houses Sold</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">35</div>
+                    <div class="stat-label">Years Combined Experience</div>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 18px; max-width: 700px; margin: 40px auto; color: #B8960C;">
+                Voted Best Realtors by Little Rock Soirée. Pinnacle Diamond Award Winners 2025.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our 30 Day Expired Listing Strategy -->
+    <section class="parallax-section solution-section">
+        <div class="content">
+            <h2>Our 30 Day Expired Listing Strategy</h2>
+            <div class="benefit-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-text">
+                        <h4>Aggressive & Targeted Approach</h4>
+                        <p>No more "list and wait." We implement an aggressive, targeted marketing strategy from day one. This is the approach you've been looking for.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📢</div>
+                    <div class="benefit-text">
+                        <h4>Real Marketing. Real Results.</h4>
+                        <p>Professional photos, social media campaigns, targeted ads, MLS syndication, buyer network outreach, open houses. We market your home everywhere, not just online.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📞</div>
+                    <div class="benefit-text">
+                        <h4>Regular Communication & Updates</h4>
+                        <p>No more wondering what's happening. We provide regular updates on where we're at with getting you an offer. You'll always know the status of your listing.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📅</div>
+                    <div class="benefit-text">
+                        <h4>30 Days. No Long-Term Commitment.</h4>
+                        <p>No 6-month lock-in. No upfront fees. No cancellation penalties. Just 30 days of aggressive marketing for as low as 3% total commission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="parallax-section stats-section">
+        <div class="content">
+            <h2>The Results Speak</h2>
+            <p style="text-align: center; font-size: 20px; max-width: 900px; margin: 0 auto 60px;">
+                What makes us the #1 team in Central Arkansas? We only run listings for 30 days at a time with no upfront fees and no cancellation fees.
+            </p>
+            <div style="background: rgba(184,150,12,0.15); border-left: 4px solid #B8960C; padding: 40px; margin: 0 auto 60px; max-width: 900px;">
+                <p style="font-size: 24px; font-weight: 300; color: #B8960C; text-align: center; line-height: 1.6; margin: 0;">
+                    The average time for a property to sell is between day 28-35. So why would you lock yourself into an agreement for 180 days?
+                </p>
+            </div>
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div class="stat-number">28-35</div>
+                    <div class="stat-label">Days Average Time to Sell</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Day Listing Agreements</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">3%</div>
+                    <div class="stat-label">Commission (as low as)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">$0</div>
+                    <div class="stat-label">Cancellation Fees</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Your Free Strategy Form -->
+    <section class="form-section" id="get-strategy">
+        <div class="content">
+            <h2>Get Your Free Expired Listing Strategy</h2>
+            <p style="text-align: center; margin-bottom: 40px;">
+                Before you commit to another 6 months of the same approach, see the strategy that's made us #1 in Central Arkansas with over 1000 homes sold.
+            </p>
+            <div class="form-container">
+                <form id="listing-form">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Property Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">Desired Timeline to Move</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline...</option>
+                            <option value="asap">As soon as possible</option>
+                            <option value="30-days">Within 30 days</option>
+                            <option value="60-days">30-60 days</option>
+                            <option value="90-days">60-90 days</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="price">Desired Price</label>
+                        <input type="text" id="price" name="price" placeholder="e.g., $350,000">
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="pricing-analysis" name="pricing_analysis" value="yes">
+                        <label for="pricing-analysis">Yes, I would like a complimentary pricing analysis done on my property</label>
+                    </div>
+                    
+                    <button type="submit">Get My Free Strategy</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>The BLK Group at LPT Realty</p>
+        <p style="margin-top: 10px;">11324 Arcade Drive, #23, Little Rock, AR</p>
+        <p style="margin-top: 20px;">&copy; 2026 The BLK Group. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Supabase
+        const SUPABASE_URL = 'https://fzlwkbhpsklsgkinwljt.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.lc6A8RCUySU0Hn9MjPcR9rH1c8DjSj_A7MV8JuLvwik';
+        const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Form submission
+        document.getElementById('listing-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            const leadData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                property_address: document.getElementById('address').value,
+                timeline: document.getElementById('timeline').value,
+                price_desired: document.getElementById('price').value,
+                pricing_analysis: document.getElementById('pricing-analysis').checked,
+                status: 'new',
+                lead_type: 'expired_listing'
+            };
+            
+            try {
+                // Save to Supabase
+                const { error } = await sb
+                    .from('expired_listing_leads')
+                    .insert(leadData);
+                
+                if (error) throw error;
+                
+                // Send email notification
+                const emailData = new FormData();
+                emailData.append('email', 'BrandonBLKGroup@Gmail.com');
+                emailData.append('subject', '🏚️ New Expired Listing Lead - ' + leadData.name);
+                emailData.append('message', `
+NEW EXPIRED LISTING LEAD
+
+Name: ${leadData.name}
+Email: ${leadData.email}
+Property Address: ${leadData.property_address}
+Timeline: ${leadData.timeline}
+Price Desired: ${leadData.price_desired}
+Pricing Analysis: ${leadData.pricing_analysis ? 'YES' : 'No'}
+
+Source: ExpiredListingStrategy.com
+                `);
+                
+                fetch('https://formsubmit.co/ajax/BrandonBLKGroup@Gmail.com', {
+                    method: 'POST',
+                    body: emailData
+                }).catch(err => console.error('Email send failed:', err));
+                
+                alert('Thank you! We\'ll email you the Expired Listing Strategy within 24 hours.');
+                document.getElementById('listing-form').reset();
+            } catch (error) {
+                console.error('Error submitting lead:', error);
+                alert('There was an error submitting your request. Please call us at (479) 857-5994.');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+
+    <!-- Analytics Tracking -->
+    <script>
+        // Track page view
+        (async function() {
+            try {
+                await fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/page_views', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.lc6A8RCUySU0Hn9MjPcR9rH1c8DjSj_A7MV8JuLvwik',
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.lc6A8RCUySU0Hn9MjPcR9rH1c8DjSj_A7MV8JuLvwik',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        domain: 'expiredlistingstrategy.com',
+                        page: window.location.pathname + window.location.hash,
+                        referrer: document.referrer || 'direct'
+                    })
+                });
+            } catch (err) {
+                console.error('Analytics tracking failed:', err);
+            }
+        })();
+    </script>
+</body>
+</html>
