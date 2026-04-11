@@ -53,6 +53,92 @@
             justify-content: center;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://theblk.group/parallax-1-new.jpg') center center/cover fixed;
             padding: 100px 20px 60px;
+            position: relative;
+        }
+        
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .scroll-indicator p {
+            color: #B8960C;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .chevrons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .chevron {
+            position: relative;
+            width: 28px;
+            height: 8px;
+            opacity: 0;
+            transform: scale(0.3);
+            animation: move-chevron 3s ease-out infinite;
+        }
+        
+        .chevron:first-child {
+            animation-delay: 0s;
+        }
+        
+        .chevron:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+        
+        .chevron:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        
+        .chevron:before,
+        .chevron:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            background: #B8960C;
+        }
+        
+        .chevron:before {
+            left: 0;
+            transform: skewY(30deg);
+        }
+        
+        .chevron:after {
+            right: 0;
+            width: 50%;
+            transform: skewY(-30deg);
+        }
+        
+        @keyframes move-chevron {
+            25% {
+                opacity: 1;
+            }
+            33.3% {
+                opacity: 1;
+                transform: translateY(2.28rem);
+            }
+            66.6% {
+                opacity: 1;
+                transform: translateY(3.12rem);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(4.8rem) scale(0.5);
+            }
         }
         
         .hero-container {
@@ -447,6 +533,10 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
+            
+            .scroll-indicator {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -535,6 +625,16 @@
                     <span class="sms-number">(479) 857-5994</span>
                     <p class="sms-code">Text "EXPIRED" for details</p>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})">
+            <p>Scroll Down</p>
+            <div class="chevrons">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
             </div>
         </div>
     </section>
