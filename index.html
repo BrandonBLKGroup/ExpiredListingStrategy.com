@@ -397,8 +397,9 @@
         
         /* Team Section */
         .team-section {
-            padding: 80px 20px;
-            background: #000;
+            padding: 100px 20px;
+            background: #FFFFFF;
+            border-top: 1px solid #E5E5E5;
         }
         
         .team-container {
@@ -407,12 +408,12 @@
         }
         
         .team-section h2 {
-            font-size: 42px;
+            font-size: 48px;
             text-align: center;
             margin-bottom: 60px;
-            color: #B8960C;
+            color: #1a1a1a;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: -0.5px;
         }
         
         .team-grid {
@@ -424,20 +425,23 @@
         .team-member {
             text-align: center;
             padding: 30px 15px;
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 8px;
             transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.08);
         }
         
         .team-member:hover {
-            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .team-member-photo {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: rgba(184, 150, 12, 0.15);
+            background: #FAFAFA;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
@@ -445,22 +449,22 @@
             font-size: 28px;
             font-weight: 300;
             color: #B8960C;
-            border: 1px solid rgba(184, 150, 12, 0.3);
+            border: 1px solid #E5E5E5;
         }
         
         .team-member h4 {
             font-size: 16px;
             font-weight: 400;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             margin-bottom: 8px;
-            color: #ffffff;
+            color: #1a1a1a;
         }
         
         .team-member p {
             font-size: 11px;
             font-weight: 300;
             letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.5);
+            color: #888;
             text-transform: uppercase;
             margin-bottom: 5px;
         }
@@ -485,15 +489,16 @@
         
         /* Footer */
         .footer {
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
-            background: #000;
-            border-top: 1px solid #333;
+            background: #FAFAFA;
+            border-top: 1px solid #E5E5E5;
         }
         
         .footer p {
             color: #888;
             font-size: 14px;
+            font-weight: 300;
         }
         
         /* Mobile */
@@ -856,63 +861,63 @@
     <!-- Comparison Section -->
     <section style="padding: 100px 20px; background: linear-gradient(rgba(250,250,250,0.80), rgba(250,250,250,0.80)), url('https://theblk.group/hero-bg-new.jpg') center center/cover fixed;">
         <div style="max-width: 1100px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 50px; text-align: center; font-weight: 300;">Them vs. Us</h2>
+            <h2 style="font-size: 48px; color: #1a1a1a; margin-bottom: 60px; text-align: center; font-weight: 300; letter-spacing: -0.5px;">Them vs. Us</h2>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-                <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; border: 1px solid #333;">
-                    <h3 style="font-size: 24px; color: #ff4444; margin-bottom: 30px; text-align: center;">❌ Traditional Agents</h3>
+                <div style="background: rgba(255,255,255,0.6); padding: 40px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <h3 style="font-size: 24px; color: #ff4444; margin-bottom: 30px; text-align: center; font-weight: 400;">❌ Traditional Agents</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #555; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             6-month contract (whether you sell or not)
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #555; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             5-6% commission split
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #555; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             "Set it and forget it" MLS listing
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #555; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             Sporadic communication
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #555; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             No real marketing budget
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #555; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #ff4444;">✗</span>
                             You're stuck even if nothing happens
                         </li>
                     </ul>
                 </div>
                 
-                <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; border: 2px solid #B8960C;">
-                    <h3 style="font-size: 24px; color: #B8960C; margin-bottom: 30px; text-align: center;">✓ The BLK Group</h3>
+                <div style="background: rgba(255,255,255,0.7); padding: 40px; border-radius: 8px; border: 2px solid #B8960C; backdrop-filter: blur(10px); box-shadow: 0 4px 16px rgba(184,150,12,0.1);">
+                    <h3 style="font-size: 24px; color: #B8960C; margin-bottom: 30px; text-align: center; font-weight: 400;">✓ The BLK Group</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #333; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             30-day agreement (results or you walk)
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #333; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             3% commission (save thousands)
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #333; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Aggressive multi-channel marketing
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #333; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Weekly updates every Monday
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #333; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Real ad spend on YOUR home
                         </li>
-                        <li style="color: #ccc; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative;">
+                        <li style="color: #333; font-size: 17px; margin-bottom: 20px; padding-left: 30px; position: relative; font-weight: 300;">
                             <span style="position: absolute; left: 0; color: #B8960C;">✓</span>
                             Zero risk, zero long-term trap
                         </li>
@@ -923,61 +928,61 @@
     </section>
 
     <!-- Social Proof / Results Section -->
-    <section style="padding: 80px 20px; background: #111;">
+    <section style="padding: 100px 20px; background: #FFFFFF; border-top: 1px solid #E5E5E5;">
         <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 50px; text-align: center; font-weight: 300;">Real Results from Real Sellers</h2>
+            <h2 style="font-size: 48px; color: #1a1a1a; margin-bottom: 60px; text-align: center; font-weight: 300; letter-spacing: -0.5px;">Real Results from Real Sellers</h2>
             
-            <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C;">
-                <p style="font-size: 18px; line-height: 1.8; color: #ccc; font-style: italic; margin-bottom: 20px;">
+            <div style="background: rgba(255,255,255,0.6); padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <p style="font-size: 18px; line-height: 1.9; color: #555; font-style: italic; margin-bottom: 20px; font-weight: 300;">
                     "My house sat on the market for 4 months with my previous agent. Within 3 weeks of listing with The BLK Group, I had multiple offers. Brandon's marketing strategy actually works."
                 </p>
-                <p style="color: #B8960C; font-weight: 600;">— Sarah M., Little Rock</p>
+                <p style="color: #B8960C; font-weight: 400;">— Sarah M., Little Rock</p>
             </div>
             
-            <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C;">
-                <p style="font-size: 18px; line-height: 1.8; color: #ccc; font-style: italic; margin-bottom: 20px;">
+            <div style="background: rgba(255,255,255,0.6); padding: 40px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #B8960C; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <p style="font-size: 18px; line-height: 1.9; color: #555; font-style: italic; margin-bottom: 20px; font-weight: 300;">
                     "I was skeptical about the 30-day program, but I was desperate. They sold my home in 21 days for MORE than what I was originally asking. I should have called them first."
                 </p>
-                <p style="color: #B8960C; font-weight: 600;">— Michael T., Conway</p>
+                <p style="color: #B8960C; font-weight: 400;">— Michael T., Conway</p>
             </div>
             
-            <div style="background: #1a1a1a; padding: 40px; border-radius: 8px; border-left: 4px solid #B8960C;">
-                <p style="font-size: 18px; line-height: 1.8; color: #ccc; font-style: italic; margin-bottom: 20px;">
+            <div style="background: rgba(255,255,255,0.6); padding: 40px; border-radius: 8px; border-left: 4px solid #B8960C; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <p style="font-size: 18px; line-height: 1.9; color: #555; font-style: italic; margin-bottom: 20px; font-weight: 300;">
                     "After my listing expired, I thought I'd have to drop the price drastically. The BLK Group showed me a better way. Real marketing. Weekly updates. And a sale in 28 days at full price."
                 </p>
-                <p style="color: #B8960C; font-weight: 600;">— Jennifer K., Bryant</p>
+                <p style="color: #B8960C; font-weight: 400;">— Jennifer K., Bryant</p>
             </div>
         </div>
     </section>
 
     <!-- FAQ / Objection Handling -->
-    <section style="padding: 80px 20px; background: #111;">
+    <section style="padding: 100px 20px; background: #FAFAFA;">
         <div style="max-width: 900px; margin: 0 auto;">
-            <h2 style="font-size: 42px; color: #B8960C; margin-bottom: 50px; text-align: center; font-weight: 300;">Common Questions</h2>
+            <h2 style="font-size: 48px; color: #1a1a1a; margin-bottom: 60px; text-align: center; font-weight: 300; letter-spacing: -0.5px;">Common Questions</h2>
             
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">What if my house doesn't sell in 30 days?</h3>
-                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">You walk away. No penalties. No fees. No long-term commitment. We don't believe in trapping sellers in contracts that aren't working.</p>
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px; font-weight: 400;">What if my house doesn't sell in 30 days?</h3>
+                <p style="color: #666; font-size: 17px; line-height: 1.9; font-weight: 300;">You walk away. No penalties. No fees. No long-term commitment. We don't believe in trapping sellers in contracts that aren't working.</p>
             </div>
             
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">Why only 3% commission instead of 5-6%?</h3>
-                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">Because we do the volume. We'd rather help more sellers and make our profit on quantity, not gouging individual sellers.</p>
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px; font-weight: 400;">Why only 3% commission instead of 5-6%?</h3>
+                <p style="color: #666; font-size: 17px; line-height: 1.9; font-weight: 300;">Because we do the volume. We'd rather help more sellers and make our profit on quantity, not gouging individual sellers.</p>
             </div>
             
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">What makes you different from the agent I already had?</h3>
-                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">We actually market your home. Facebook ads. Instagram campaigns. Direct mail. Custom websites. Weekly updates. Real work. Not hope.</p>
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px; font-weight: 400;">What makes you different from the agent I already had?</h3>
+                <p style="color: #666; font-size: 17px; line-height: 1.9; font-weight: 300;">We actually market your home. Facebook ads. Instagram campaigns. Direct mail. Custom websites. Weekly updates. Real work. Not hope.</p>
             </div>
             
-            <div style="margin-bottom: 30px;">
-                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">What if I already lowered my price and it still didn't sell?</h3>
-                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">Price isn't always the problem. Marketing is. We've sold "overpriced" homes because we got them in front of the RIGHT buyers. Not just any buyers.</p>
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px; font-weight: 400;">What if I already lowered my price and it still didn't sell?</h3>
+                <p style="color: #666; font-size: 17px; line-height: 1.9; font-weight: 300;">Price isn't always the problem. Marketing is. We've sold "overpriced" homes because we got them in front of the RIGHT buyers. Not just any buyers.</p>
             </div>
             
             <div>
-                <h3 style="font-size: 22px; color: #fff; margin-bottom: 15px;">How quickly can we get started?</h3>
-                <p style="color: #ccc; font-size: 17px; line-height: 1.8;">This week. Fill out the form above or call us at (479) 857-5994. We'll come by, walk the home, and have a marketing plan ready, get photographers out to the house, and have you up and running within 48 hours.</p>
+                <h3 style="font-size: 22px; color: #1a1a1a; margin-bottom: 15px; font-weight: 400;">How quickly can we get started?</h3>
+                <p style="color: #666; font-size: 17px; line-height: 1.9; font-weight: 300;">This week. Fill out the form above or call us at (479) 857-5994. We'll come by, walk the home, and have a marketing plan ready, get photographers out to the house, and have you up and running within 48 hours.</p>
             </div>
         </div>
     </section>
@@ -985,32 +990,32 @@
     <!-- Final CTA Section -->
     <section style="padding: 100px 20px; background: linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('https://theblk.group/parallax-services.jpg') center center/cover fixed; text-align: center;">
         <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: 48px; color: #B8960C; margin-bottom: 30px; font-weight: 300;">You've Waited Long Enough</h2>
-            <p style="font-size: 22px; line-height: 1.8; color: #ccc; margin-bottom: 40px;">
+            <h2 style="font-size: 52px; color: #1a1a1a; margin-bottom: 30px; font-weight: 300; letter-spacing: -0.5px;">You've Waited Long Enough</h2>
+            <p style="font-size: 22px; line-height: 1.7; color: #555; margin-bottom: 40px; font-weight: 300;">
                 Another 6 months with the same strategy? Or 30 days with real marketing and real results?
             </p>
-            <p style="font-size: 20px; color: #fff; margin-bottom: 40px;">
-                Fill out the form below or call/text us now: <a href="tel:+14798575994" style="color: #B8960C; text-decoration: none; font-weight: 700;">(479) 857-5994</a>
+            <p style="font-size: 20px; color: #333; margin-bottom: 40px; font-weight: 300;">
+                Fill out the form below or call/text us now: <a href="tel:+14798575994" style="color: #B8960C; text-decoration: none; font-weight: 400;">(479) 857-5994</a>
             </p>
             
             <!-- Form -->
-            <form id="final-cta-form" style="background: #1a1a1a; padding: 40px; border-radius: 12px; margin: 0 auto 40px; max-width: 500px; text-align: left;">
+            <form id="final-cta-form" style="background: rgba(255,255,255,0.7); padding: 50px; border-radius: 8px; margin: 0 auto 40px; max-width: 500px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.1);">
                 <div style="margin-bottom: 20px;">
                     <input type="text" id="final-name" placeholder="Your Name" required 
-                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #444; border-radius: 6px; background: #0a0a0a; color: #fff;">
+                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #E5E5E5; border-radius: 6px; background: rgba(255,255,255,0.9); color: #1a1a1a;">
                 </div>
                 <div style="margin-bottom: 20px;">
                     <input type="tel" id="final-phone" placeholder="Your Phone Number" required 
-                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #444; border-radius: 6px; background: #0a0a0a; color: #fff;">
+                           style="width: 100%; padding: 15px; font-size: 16px; border: 1px solid #E5E5E5; border-radius: 6px; background: rgba(255,255,255,0.9); color: #1a1a1a;">
                 </div>
                 <button type="submit" 
-                        style="width: 100%; padding: 18px; font-size: 18px; font-weight: 700; background: #B8960C; color: #000; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s;">
+                        style="width: 100%; padding: 18px; font-size: 18px; font-weight: 600; background: #B8960C; color: #fff; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s;">
                     Get Your Free Marketing Plan
                 </button>
-                <p style="font-size: 13px; color: #888; text-align: center; margin-top: 15px;">No spam. No pressure. Just honest help.</p>
+                <p style="font-size: 13px; color: #666; text-align: center; margin-top: 15px;">No spam. No pressure. Just honest help.</p>
             </form>
             
-            <p style="font-size: 16px; color: #888;">
+            <p style="font-size: 16px; color: #666; font-weight: 300;">
                 🔥 Remember: We're only taking 15 new listings per month. Spots fill fast.
             </p>
         </div>
