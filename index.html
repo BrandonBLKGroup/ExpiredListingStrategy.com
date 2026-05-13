@@ -1266,8 +1266,9 @@
         });
     </script>
 
+
 <!-- Background Music -->
-<audio id="bgMusic" loop>
+<audio id="bgMusic" loop preload="auto">
     <source src="golden.mp3" type="audio/mpeg">
 </audio>
 
@@ -1281,6 +1282,13 @@
     background: rgba(184, 150, 12, 0.9);
     transform: scale(1.1);
 }
+#audioToggle.pulse {
+    animation: audioReady 2s ease-in-out infinite;
+}
+@keyframes audioReady {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
 </style>
 
 <script>
@@ -1293,26 +1301,37 @@
     audio.volume = 0.12;
     
     let isPlaying = false;
+    let attempted = false;
     
-    // Try to autoplay after first user interaction
-    function tryAutoplay() {
-        if (!isPlaying) {
+    // Try to autoplay immediately
+    function tryPlay() {
+        if (!attempted && !isPlaying) {
+            attempted = true;
             audio.play().then(() => {
                 isPlaying = true;
                 icon.textContent = '🔊';
+                toggle.classList.remove('pulse');
             }).catch(() => {
-                // Autoplay blocked, wait for manual play
+                // Autoplay blocked - add pulse to button to draw attention
+                toggle.classList.add('pulse');
+                icon.textContent = '🔇';
             });
         }
     }
     
-    // Listen for any user interaction to start music
-    document.addEventListener('click', tryAutoplay, { once: true });
-    document.addEventListener('scroll', tryAutoplay, { once: true });
+    // Try multiple triggers
+    setTimeout(tryPlay, 100); // Try immediately after load
+    document.addEventListener('DOMContentLoaded', tryPlay);
+    document.addEventListener('click', tryPlay, { once: true });
+    document.addEventListener('touchstart', tryPlay, { once: true });
+    document.addEventListener('scroll', tryPlay, { once: true });
+    document.addEventListener('mousemove', tryPlay, { once: true });
+    document.addEventListener('keydown', tryPlay, { once: true });
     
     // Toggle play/pause
     toggle.addEventListener('click', (e) => {
         e.stopPropagation();
+        toggle.classList.remove('pulse');
         if (audio.paused) {
             audio.play();
             isPlaying = true;
@@ -1325,5 +1344,4 @@
     });
 })();
 </script>
-</body>
 </html>
