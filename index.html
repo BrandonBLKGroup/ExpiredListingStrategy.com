@@ -1267,6 +1267,7 @@
     </script>
 
 
+
 <!-- Background Music -->
 <audio id="bgMusic" loop preload="auto">
     <source src="golden.mp3" type="audio/mpeg">
@@ -1282,13 +1283,6 @@
     background: rgba(184, 150, 12, 0.9);
     transform: scale(1.1);
 }
-#audioToggle.pulse {
-    animation: audioReady 2s ease-in-out infinite;
-}
-@keyframes audioReady {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
 </style>
 
 <script>
@@ -1300,45 +1294,46 @@
     // Set volume to 12% (very subtle)
     audio.volume = 0.12;
     
-    let isPlaying = false;
-    let attempted = false;
+    let hasStarted = false;
     
-    // Try to autoplay immediately
-    function tryPlay() {
-        if (!attempted && !isPlaying) {
-            attempted = true;
+    // PRIMARY TRIGGER: Scroll (instant, even 1px)
+    window.addEventListener('scroll', function startOnScroll() {
+        if (!hasStarted) {
+            hasStarted = true;
             audio.play().then(() => {
-                isPlaying = true;
                 icon.textContent = '🔊';
-                toggle.classList.remove('pulse');
-            }).catch(() => {
-                // Autoplay blocked - add pulse to button to draw attention
-                toggle.classList.add('pulse');
-                icon.textContent = '🔇';
+            }).catch(err => {
+                console.log('Audio play failed:', err);
+                hasStarted = false; // Allow retry
             });
         }
-    }
+    }, { passive: true });
     
-    // Try multiple triggers
-    setTimeout(tryPlay, 100); // Try immediately after load
-    document.addEventListener('DOMContentLoaded', tryPlay);
-    document.addEventListener('click', tryPlay, { once: true });
-    document.addEventListener('touchstart', tryPlay, { once: true });
-    document.addEventListener('scroll', tryPlay, { once: true });
-    document.addEventListener('mousemove', tryPlay, { once: true });
-    document.addEventListener('keydown', tryPlay, { once: true });
+    // BACKUP TRIGGERS: Click, touch, mousemove
+    const backupStart = function() {
+        if (!hasStarted) {
+            hasStarted = true;
+            audio.play().then(() => {
+                icon.textContent = '🔊';
+            }).catch(() => {
+                hasStarted = false;
+            });
+        }
+    };
     
-    // Toggle play/pause
+    document.addEventListener('click', backupStart, { once: true });
+    document.addEventListener('touchstart', backupStart, { once: true });
+    document.addEventListener('mousemove', backupStart, { once: true });
+    
+    // Manual toggle
     toggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        toggle.classList.remove('pulse');
         if (audio.paused) {
             audio.play();
-            isPlaying = true;
+            hasStarted = true;
             icon.textContent = '🔊';
         } else {
             audio.pause();
-            isPlaying = false;
             icon.textContent = '🔇';
         }
     });
