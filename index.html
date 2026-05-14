@@ -1269,6 +1269,7 @@
 
 
 
+
 <!-- Background Music -->
 <audio id="bgMusic" loop preload="auto" muted autoplay>
     <source src="golden.mp3" type="audio/mpeg">
@@ -1302,27 +1303,34 @@
         // If even muted autoplay fails, try on interaction
     });
     
-    // UNMUTE on first scroll
-    window.addEventListener('scroll', function unmuteOnScroll() {
+    function unmute() {
         if (!hasUnmuted) {
             hasUnmuted = true;
             audio.muted = false;
             icon.textContent = '🔊';
         }
-    }, { passive: true, once: true });
+    }
     
-    // BACKUP: Unmute on any interaction
-    const unmuteBackup = function() {
-        if (!hasUnmuted) {
-            hasUnmuted = true;
-            audio.muted = false;
-            icon.textContent = '🔊';
+    // CATCH ALL SCROLL TYPES:
+    // 1. Regular scroll (trackpad, scrollbar drag)
+    window.addEventListener('scroll', unmute, { passive: true, once: true });
+    
+    // 2. Mouse wheel (including middle-click scroll)
+    window.addEventListener('wheel', unmute, { passive: true, once: true });
+    
+    // 3. Touch scroll (mobile)
+    window.addEventListener('touchmove', unmute, { passive: true, once: true });
+    
+    // 4. Keyboard scroll (arrow keys, space, page down)
+    window.addEventListener('keydown', function(e) {
+        if ([32, 33, 34, 35, 36, 37, 38, 39, 40].includes(e.keyCode)) {
+            unmute();
         }
-    };
+    }, { once: true });
     
-    document.addEventListener('click', unmuteBackup, { once: true });
-    document.addEventListener('touchstart', unmuteBackup, { once: true });
-    document.addEventListener('mousemove', unmuteBackup, { once: true });
+    // BACKUP: Any other interaction
+    document.addEventListener('click', unmute, { once: true });
+    document.addEventListener('mousemove', unmute, { once: true });
     
     // Manual toggle
     toggle.addEventListener('click', (e) => {
