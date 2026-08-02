@@ -39,13 +39,14 @@
 
         
         .hero-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr 480px;
+            gap: 80px;
             position: relative;
             z-index: 1;
+            align-items: start;
         }
         
         .hero-left h1 {
@@ -187,7 +188,8 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
             border: 1px solid rgba(0,0,0,0.08);
             position: sticky;
-            top: 20px;
+            top: 80px;
+            align-self: start;
         }
         
         .urgency-badge {
@@ -606,6 +608,12 @@
             }
             .hero-content {
                 grid-template-columns: 1fr;
+            }
+            
+            .form-card {
+                position: relative !important;
+                top: 0 !important;
+                margin-top: 50px;
             }
             
             .hero-left h1 {
