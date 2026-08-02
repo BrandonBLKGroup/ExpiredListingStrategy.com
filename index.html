@@ -1869,8 +1869,26 @@
             <button class="exit-close" onclick="document.getElementById('exitPopup').classList.remove('show')">×</button>
             <h2 class="exit-title">Wait! Before You Go...</h2>
             <p class="exit-text">You've already wasted 6+ months with the wrong agent. Don't let it happen again.</p>
-            <div class="exit-offer">TEXT "EXPIRED" TO (479) 857-5994<br>Get Our Free Guide: "Why Your House Didn't Sell"</div>
-            <p style="font-size: 14px; color: #666;">We'll text you "The 5 Reasons Your House Didn't Sell (And How To Fix Them)" in 60 seconds.</p>
+            
+            <!-- Text Option -->
+            <div style="margin: 30px 0;">
+                <a href="sms:+14798575994&body=EXPIRED" style="display: inline-block; background: #B8960C; color: #000; padding: 18px 36px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; transition: all 0.2s;">
+                    📱 Text "EXPIRED" to (479) 857-5994
+                </a>
+                <p style="font-size: 13px; color: #999; margin-top: 12px;">Get our free guide instantly via text</p>
+            </div>
+            
+            <div style="text-align: center; color: #999; font-weight: 600; margin: 25px 0; font-size: 14px;">— OR —</div>
+            
+            <!-- Email Option -->
+            <div style="margin-top: 25px;">
+                <p style="font-size: 15px; font-weight: 600; margin-bottom: 16px; color: #1a1a1a;">Submit your email for the free guide:</p>
+                <form id="exitEmailForm" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="email" required placeholder="Your email address" style="padding: 14px; border: 2px solid #ddd; border-radius: 6px; font-size: 15px;">
+                    <input type="text" placeholder="Property address (optional)" style="padding: 14px; border: 2px solid #ddd; border-radius: 6px; font-size: 15px;">
+                    <button type="submit" style="background: #1a1a1a; color: #fff; padding: 16px; border: none; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer;">Send Me The Free Guide</button>
+                </form>
+            </div>
         </div>
     </div>
     
