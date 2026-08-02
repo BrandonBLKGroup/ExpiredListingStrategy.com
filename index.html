@@ -573,7 +573,7 @@
             margin-bottom: 30px;
         }
         
-        /* Mobile */
+        
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -584,7 +584,7 @@
             }
             
             .proof-bar {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: 20px;
             }
             
@@ -607,12 +607,22 @@
             .final-cta-buttons {
                 flex-direction: column;
             }
+            
+            /* Service areas grid - 2 columns on mobile */
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
         }
     </style>
 </head>
 <body>
     
     <!-- Trust Banner -->
+    <!-- LPT Realty Banner -->
+    <div style="background: rgba(255,255,255,0.98); padding: 12px 0; text-align: center; border-bottom: 1px solid #e0e0e0;">
+        <img src="lpt-logo.jpg" alt="LPT Realty" style="height: 45px;">
+    </div>
+    
     <div class="trust-banner">
         Voted Best Realtors - Little Rock Soiree 2025 & 2026  |  Pinnacle Diamond Award ($30M+ Sold)  |  800+ Homes Sold  |  #1 Team 2025
     </div>
@@ -621,6 +631,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-left">
+                <img src="blk-logo.png" alt="The BLK Group" style="width: 140px; margin-bottom: 30px; filter: brightness(0) invert(1);">
                 <h1>Your Agent <span class="highlight">Failed You.</span><br>We Won't.</h1>
                 
                 <p class="subhead">Your listing expired. You wasted 6+ months. You got ghosted and trapped. <strong>We get it.</strong> Give us 30 days or fire us. <strong>Zero upfront fees. Zero cancellation fees. We bear all the marketing costs.</strong> You only pay when we sell your house.</p>
@@ -782,6 +793,77 @@
         </div>
     </section>
     
+
+    <!-- WEEKLY PERFORMANCE DASHBOARD -->
+    <section style="padding: 100px 20px; background: #0a0a0a;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 class="section-title">You'll Always Know What's Happening</h2>
+                <p class="section-subtitle">Our internal tracking system vs. your old agent's guesswork</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+                <div style="background: rgba(255,68,68,0.08); border: 1px solid rgba(255,68,68,0.2); border-radius: 8px; padding: 40px;">
+                    <h3 style="font-size: 24px; margin-bottom: 24px; color: #ff4444;">Most Agents</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #ff4444; flex-shrink: 0;">×</span>
+                            <span>"I'll call you when I hear something"</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #ff4444; flex-shrink: 0;">×</span>
+                            <span>No idea how many people viewed your listing</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #ff4444; flex-shrink: 0;">×</span>
+                            <span>Don't track online engagement or interest</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #ff4444; flex-shrink: 0;">×</span>
+                            <span>No follow-up strategy with interested buyers</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #ff4444; flex-shrink: 0;">×</span>
+                            <span>You're left wondering what's actually happening</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div style="background: rgba(184,150,12,0.08); border: 1px solid rgba(184,150,12,0.2); border-radius: 8px; padding: 40px;">
+                    <h3 style="font-size: 24px; margin-bottom: 24px; color: #B8960C;">The BLK Group Weekly Dashboard</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #B8960C; flex-shrink: 0;">✓</span>
+                            <span>Total online views (MLS, Zillow, Realtor.com)</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #B8960C; flex-shrink: 0;">✓</span>
+                            <span>Number of potential buyers who saved/favorited</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #B8960C; flex-shrink: 0;">✓</span>
+                            <span>Showing requests and buyer feedback</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #B8960C; flex-shrink: 0;">✓</span>
+                            <span>Marketing performance (ad reach, engagement)</span>
+                        </li>
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                            <span style="color: #B8960C; flex-shrink: 0;">✓</span>
+                            <span>Strategic adjustments to drive more showings</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(184,150,12,0.1); border-radius: 8px;">
+                <h3 style="font-size: 28px; margin-bottom: 16px; font-weight: 700;">Weekly Updates. Real Data. Zero Ghosting.</h3>
+                <p style="font-size: 18px; color: #ccc; margin-bottom: 30px;">Every Friday, you'll know exactly how many potential buyers are interested and what we're doing to convert them into offers.</p>
+                <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">See How It Works - Free Strategy Call</button>
+            </div>
+        </div>
+    </section>
+
     <!-- GUARANTEE SECTION -->
     <section class="guarantee-section">
         <div class="guarantee-inner">
@@ -847,6 +929,34 @@
         </div>
     </section>
     
+
+    <!-- SERVICE AREAS SECTION -->
+    <section style="padding: 80px 20px; background: #000;">
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 42px; font-weight: 800; margin-bottom: 20px;">We Have Local Agents In Your Area</h2>
+            <p style="font-size: 18px; color: #999; margin-bottom: 50px;">Serving Central Arkansas with local market expertise</p>
+            
+            <div class="service-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 900px; margin: 0 auto;">
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Little Rock</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">North Little Rock</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Maumelle</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Conway</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Greenbrier</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Searcy</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Jacksonville</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Sherwood</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Benton</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Bryant</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Hot Springs</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Hot Springs Village</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Malvern</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Cabot</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Austin</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Beebe</div>
+            </div>
+        </div>
+    </section>
+
     <!-- FINAL CTA -->
     <section class="final-cta">
         <h2>Ready To Get Your House Sold?</h2>
