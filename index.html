@@ -687,6 +687,19 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(184,150,12,0.4);
         }
+
+            
+            /* Stack industry stats on mobile */
+            @media (max-width: 768px) {
+                div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                    grid-template-columns: 1fr !important;
+                    gap: 20px !important;
+                }
+                
+                div[style*="font-size: 64px"] {
+                    font-size: 52px !important;
+                }
+            }
     </style>
 </head>
 <body>
@@ -835,6 +848,41 @@
         </div>
     </section>
     
+
+
+    <!-- INDUSTRY STATS SECTION -->
+    <section style="padding: 80px 20px; background: linear-gradient(135deg, rgba(255,68,68,0.08) 0%, rgba(184,150,12,0.08) 100%);">
+        <div class="section-inner" style="max-width: 1000px;">
+            <h2 class="section-title" style="color: #ff4444;">The Ugly Truth Most Sellers Don't Know</h2>
+            <p class="section-subtitle" style="font-size: 18px; color: #1a1a1a; margin-bottom: 50px;">Here's why your last agent probably failed you (and it's not your house's fault)</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px;">
+                <div style="background: rgba(255,255,255,0.95); padding: 35px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,68,68,0.2);">
+                    <div style="font-size: 64px; font-weight: 900; color: #ff4444; line-height: 1; margin-bottom: 12px;">79%</div>
+                    <p style="font-size: 16px; font-weight: 600; color: #1a1a1a;">of realtors sold<br><strong>ZERO homes</strong> last year</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.95); padding: 35px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,68,68,0.2);">
+                    <div style="font-size: 64px; font-weight: 900; color: #ff4444; line-height: 1; margin-bottom: 12px;">93%</div>
+                    <p style="font-size: 16px; font-weight: 600; color: #1a1a1a;">of realtors sold<br><strong>fewer than 10 homes</strong></p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.95); padding: 35px; border-radius: 12px; text-align: center; border: 1px solid rgba(184,150,12,0.3);">
+                    <div style="font-size: 64px; font-weight: 900; color: #B8960C; line-height: 1; margin-bottom: 12px;">0.1%</div>
+                    <p style="font-size: 16px; font-weight: 600; color: #1a1a1a;">of realtors sell<br><strong>100+ homes per year</strong></p>
+                </div>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); padding: 40px; border-radius: 12px; border-left: 4px solid #B8960C;">
+                <p style="font-size: 18px; line-height: 1.7; color: #1a1a1a; margin-bottom: 20px;">
+                    <strong style="color: #ff4444;">The risk most sellers face:</strong> They have no idea their realtor has only sold 4 homes in the last year and really has no clue how to get your home sold.
+                </p>
+                <p style="font-size: 18px; line-height: 1.7; color: #1a1a1a; font-weight: 600;">
+                    The BLK Group sold <span style="color: #B8960C; font-weight: 800;">120+ homes in 2025</span>. We're in the top 0.1% for a reason.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- FRESH LISTING STRATEGY SECTION -->
     <section style="padding: 60px 20px 80px; background: transparent;">
