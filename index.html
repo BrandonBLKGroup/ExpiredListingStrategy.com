@@ -1024,10 +1024,18 @@
             this.reset();
         });
         
-        // Exit intent
+        // Exit intent - only after 15 seconds, only once
         let exitShown = false;
+        let exitReady = false;
+        
+        // Wait 15 seconds before exit-intent is active
+        setTimeout(() => {
+            exitReady = true;
+        }, 15000);
+        
+        // Only trigger when mouse leaves viewport at top (closing browser/tab)
         document.addEventListener('mouseleave', (e) => {
-            if (e.clientY < 10 && !exitShown) {
+            if (e.clientY < 10 && !exitShown && exitReady) {
                 document.getElementById('exitPopup').classList.add('show');
                 exitShown = true;
             }
