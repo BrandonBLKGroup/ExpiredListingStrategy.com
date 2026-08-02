@@ -660,6 +660,14 @@
                     display: inline;
                 }
             }
+
+            
+            /* Mobile: stack benefits vertically */
+            @media (max-width: 768px) {
+                div[style*="grid-template-columns: 1fr 1fr"] {
+                    grid-template-columns: 1fr !important;
+                }
+            }
     </style>
 </head>
 <body>
@@ -700,6 +708,37 @@
                     <div class="proof-item">
                         <span class="proof-number">3%</span>
                         <span class="proof-label">Commission</span>
+                    </div>
+                </div>
+                
+                <!-- Why Us Benefits -->
+                <div style="background: rgba(184,150,12,0.08); border: 2px solid rgba(184,150,12,0.25); border-radius: 12px; padding: 32px; margin: 40px auto; max-width: 900px;">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 24px; color: #1a1a1a; text-align: center;">Why Sellers Choose The BLK Group</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>30-Day Listing Agreement</strong> (not 6 months)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Zero Upfront Fees</strong> (we invest in your marketing)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Weekly Performance Reports</strong> (real data, not guesswork)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Fire Us Anytime</strong> (zero cancellation fees)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Professional Photos & Staging</strong> (included)</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: start;">
+                            <span style="color: #B8960C; font-size: 20px; font-weight: 700; flex-shrink: 0;">✓</span>
+                            <span style="font-size: 15px; color: #333; line-height: 1.5;"><strong>Aggressive Marketing</strong> (MLS + paid ads + social)</span>
+                        </div>
                     </div>
                 </div>
                 
