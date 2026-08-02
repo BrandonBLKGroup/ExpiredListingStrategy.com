@@ -709,6 +709,17 @@
         h1, h2, .section-title {
             text-shadow: 0 2px 6px rgba(255,255,255,0.8);
         }
+
+        /* Mobile: Bold and centered call button */
+        @media (max-width: 768px) {
+            .btn-call-mobile {
+                font-weight: 900 !important;
+                text-align: center !important;
+                display: block !important;
+                width: 100% !important;
+                font-size: 20px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -795,7 +806,7 @@
                 <!-- CTA Buttons -->
                 <div class="cta-buttons" style="justify-content: center; margin-top: 30px;">
                     <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">Get My Free Strategy Call</button>
-                    <a href="tel:+14798575994" class="btn btn-outline">Call Now: (479) 857-5994</a>
+                    <a href="tel:+14798575994" class="btn btn-outline btn-call-mobile">Call Now: (479) 857-5994</a>
                 </div>
             </div>
             
@@ -3671,7 +3682,7 @@
         
         <div class="final-cta-buttons">
             <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">Get My Free Strategy Call</button>
-            <a href="tel:+14798575994" class="btn btn-outline">Call Now: (479) 857-5994</a>
+            <a href="tel:+14798575994" class="btn btn-outline btn-call-mobile">Call Now: (479) 857-5994</a>
         </div>
     </section>
     
