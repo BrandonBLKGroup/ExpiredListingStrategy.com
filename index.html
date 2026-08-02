@@ -843,7 +843,7 @@
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #B8960C; flex-shrink: 0;">✓</span>
-                            <span>Total online views (MLS, Zillow, Realtor.com)</span>
+                            <span>Total online views (MLS, Zillow, Realtor.com, etc.)</span>
                         </li>
                         <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #B8960C; flex-shrink: 0;">✓</span>
@@ -1042,6 +1042,38 @@
                 exitShown = true;
             }
         });
+        
+        // Handle exit popup email form
+        const exitForm = document.getElementById('exitEmailForm');
+        if (exitForm) {
+            exitForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const email = this.querySelector('input[type="email"]').value;
+                const address = this.querySelector('input[type="text"]').value;
+                
+                // Send to Supabase
+                fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/sellers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.k3DC8UvCZ6U7Q5tujzH5YB55vfMC7sT2E4bJKlz-qM4',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        address: address || '',
+                        source: 'ExpiredListingStrategy.com - Exit Popup',
+                        created_at: new Date().toISOString()
+                    })
+                });
+                
+                // Close popup and show success
+                document.getElementById('exitPopup').classList.remove('show');
+                alert('✅ Got it! Check your email in 2 minutes for the free guide.');
+            });
+        }
     </script>
 </body>
 </html>
