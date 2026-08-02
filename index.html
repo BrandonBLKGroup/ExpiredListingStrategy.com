@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Agent Failed You. We Won't. | The BLK Group</title>
-    <meta name="description" content="#1 Real Estate Team in Arkansas. 700+ Homes Sold. Your listing expired? We'll sell it in 30 days or you walk away. 3% commission. No 6-month trap.">
+    <meta name="description" content="#1 Real Estate Team in Central Arkansas. 700+ Homes Sold. Your listing expired? We'll sell it in 30 days or you walk away. 3% commission. No 6-month trap.">
     
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box;}
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #000;
-            color: #fff;
+            background: #FFFFFF;
+            color: #1a1a1a;
             line-height: 1.6;
         }
         
@@ -29,24 +29,14 @@
         /* HERO */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('https://theblk.group/parallax-1-new.jpg') center/cover fixed;
             display: flex;
             align-items: center;
             padding: 60px 20px;
             position: relative;
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://theblk.group/parallax-1-new.jpg') center/cover;
-            opacity: 0.15;
-        }
+
         
         .hero-content {
             max-width: 1200px;
@@ -67,13 +57,17 @@
             letter-spacing: -1px;
         }
         
+        .hero-left h1 {
+            color: #1a1a1a;
+        }
+        
         .hero-left h1 .highlight {
             color: #B8960C;
         }
         
         .subhead {
             font-size: 22px;
-            color: #aaa;
+            color: #555;
             margin-bottom: 40px;
             line-height: 1.5;
         }
@@ -83,11 +77,12 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
-            margin: 40px 0;
+            margin: 40px auto;
             padding: 30px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.08);
             border-radius: 8px;
+            max-width: 900px;
         }
         
         .proof-item {
@@ -115,9 +110,10 @@
             display: flex;
             gap: 24px;
             padding: 32px;
-            background: rgba(184, 150, 12, 0.08);
+            background: #FFFBF0;
             border-left: 4px solid #B8960C;
             margin: 40px 0;
+            border-radius: 8px;
         }
         
         .brandon-photo {
@@ -133,7 +129,7 @@
             font-size: 16px;
             font-style: italic;
             line-height: 1.7;
-            color: #ddd;
+            color: #333;
         }
         
         .quote-author {
@@ -174,7 +170,7 @@
         
         .btn-outline {
             background: transparent;
-            color: #fff;
+            color: #1a1a1a;
             border: 2px solid #fff;
         }
         
@@ -184,18 +180,19 @@
         
         /* STICKY FORM CARD */
         .form-card {
-            background: #fff;
-            color: #000;
+            background: #FFFFFF;
+            color: #1a1a1a;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border: 1px solid rgba(0,0,0,0.08);
             position: sticky;
             top: 20px;
         }
         
         .urgency-badge {
             background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
-            color: #fff;
+            color: #1a1a1a;
             padding: 10px 20px;
             border-radius: 25px;
             font-size: 13px;
@@ -275,12 +272,12 @@
             text-align: center;
             margin-top: 20px;
             font-size: 13px;
-            color: #999;
+            color: #666;
         }
         
         /* PAIN SECTION */
         .pain-section {
-            background: #0a0a0a;
+            background: #FAFAFA;
             padding: 100px 20px;
         }
         
@@ -291,14 +288,16 @@
         }
         
         .section-title {
+            color: #1a1a1a;
             font-size: 48px;
             font-weight: 800;
             margin-bottom: 20px;
         }
         
         .section-subtitle {
+            color: #666;
             font-size: 20px;
-            color: #999;
+            color: #666;
             margin-bottom: 60px;
         }
         
@@ -311,7 +310,7 @@
         
         .pain-card {
             background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(0,0,0,0.08);
             border-radius: 8px;
             padding: 40px 30px;
             text-align: center;
@@ -323,21 +322,23 @@
         }
         
         .pain-title {
+            color: #1a1a1a;
             font-size: 20px;
             font-weight: 700;
             margin-bottom: 12px;
         }
         
         .pain-text {
+            color: #666;
             font-size: 15px;
-            color: #999;
+            color: #666;
             line-height: 1.6;
         }
         
         /* DATA COMPARISON */
         .comparison-section {
             padding: 100px 20px;
-            background: #000;
+            background: #FFFFFF;
         }
         
         .comparison-grid {
@@ -349,7 +350,8 @@
         }
         
         .comparison-card {
-            background: rgba(255,255,255,0.03);
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
             border-radius: 12px;
             padding: 50px 40px;
             text-align: center;
@@ -399,7 +401,7 @@
         
         .stat-label {
             font-size: 18px;
-            color: #999;
+            color: #666;
         }
         
         /* GUARANTEE SECTION */
@@ -458,7 +460,7 @@
         /* TESTIMONIALS */
         .testimonials-section {
             padding: 100px 20px;
-            background: #0a0a0a;
+            background: #FAFAFA;
         }
         
         .testimonial-grid {
@@ -470,21 +472,23 @@
         }
         
         .testimonial-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.08);
             border-radius: 8px;
             padding: 40px;
         }
         
         .testimonial-text {
+            color: #333;
             font-size: 17px;
             line-height: 1.7;
             margin-bottom: 24px;
             font-style: italic;
-            color: #ddd;
+            color: #333;
         }
         
         .testimonial-author {
+            color: #1a1a1a;
             font-weight: 600;
             font-size: 15px;
         }
@@ -498,7 +502,7 @@
         /* FINAL CTA */
         .final-cta {
             padding: 100px 20px;
-            background: #000;
+            background: #FFFFFF;
             text-align: center;
         }
         
@@ -523,7 +527,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.95);
+            background: rgba(0,0,0,0.7);
             z-index: 10000;
             align-items: center;
             justify-content: center;
@@ -551,7 +555,7 @@
             border: none;
             font-size: 32px;
             cursor: pointer;
-            color: #999;
+            color: #666;
         }
         
         .exit-title {
@@ -633,8 +637,8 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-left">
-                <img src="blk-logo.png" alt="The BLK Group" style="width: 160px; margin: 0 auto 40px; display: block; filter: brightness(0) invert(1);">
+            <div class="hero-left" style="max-width: 900px; margin: 0 auto;">
+                <img src="blk-logo.png" alt="The BLK Group" style="width: 160px; margin: 0 auto 40px; display: block; filter: none;">
                 <h1>YOUR LAST AGENT<br><span class="highlight">FAILED YOU.</span><br>WE WON'T.</h1>
                 
                 <p class="subhead" style="text-align: center;">Your listing expired. You wasted 6+ months. You got ghosted and trapped. <strong>We get it.</strong> Give us 30 days or fire us. <strong>Zero upfront fees. Zero cancellation fees. We bear all the marketing costs.</strong> You only pay when we sell your house.</p>
@@ -651,7 +655,7 @@
                     </div>
                     <div class="proof-item">
                         <span class="proof-number">#1</span>
-                        <span class="proof-label">Team in Arkansas</span>
+                        <span class="proof-label">Team in Central Arkansas</span>
                     </div>
                     <div class="proof-item">
                         <span class="proof-number">3%</span>
@@ -660,7 +664,7 @@
                 </div>
                 
                 <!-- Brandon Quote -->
-                <div class="brandon-quote">
+                <div class="brandon-quote" style="max-width: 900px; margin: 40px auto;">
                     <img src="brandon-headshot.jpg" alt="Brandon Bruning" class="brandon-photo">
                     <div>
                         <p class="quote-text">"I built The BLK Group because I was sick of watching sellers get trapped in 6-month contracts with agents who stop answering their calls after week two. You deserve an agent who shows up, markets aggressively, and communicates weekly. Give me 30 days to prove it."</p>
@@ -669,7 +673,7 @@
                 </div>
                 
                 <!-- CTA Buttons -->
-                <div class="cta-buttons">
+                <div class="cta-buttons" style="justify-content: center;">
                     <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">Get My Free Strategy Call</button>
                     <a href="tel:+14798575994" class="btn btn-outline">Call Now: (479) 857-5994</a>
                 </div>
@@ -735,31 +739,31 @@
     
 
     <!-- FRESH LISTING STRATEGY SECTION -->
-    <section style="padding: 100px 20px; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);">
+    <section style="padding: 100px 20px; background: #FAFAFA;">
         <div class="section-inner" style="max-width: 1100px; margin: 0 auto;">
             <h2 class="section-title">The 30-Day Fresh Listing Strategy</h2>
             <p class="section-subtitle">Why our approach keeps your house in front of buyers (while other agents let it go stale)</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 60px;">
-                <div style="background: rgba(255,68,68,0.1); border-left: 4px solid #ff4444; padding: 40px; border-radius: 8px;">
-                    <h3 style="font-size: 28px; margin-bottom: 20px; color: #ff4444;">Most Agents (100+ Days)</h3>
+                <div style="background: rgba(255,68,68,0.05); border: 1px solid rgba(255,68,68,0.15); border-left: 4px solid #ff4444; padding: 40px; border-radius: 8px;">
+                    <h3 style="font-size: 28px; color: #1a1a1a; margin-bottom: 20px; color: #ff4444;">Most Agents (100+ Days)</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">× Same photos, same description for months</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">× Buyers see it's been sitting (assume something's wrong)</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">× Listing becomes "burned" in the market</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">× Price drops become desperate, obvious</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">× No marketing budget left after month 1</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× Same photos, same description for months</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× Buyers see it's been sitting (assume something's wrong)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× Listing becomes "burned" in the market</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× Price drops become desperate, obvious</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">× No marketing budget left after month 1</li>
                     </ul>
                 </div>
                 
-                <div style="background: rgba(184,150,12,0.1); border-left: 4px solid #B8960C; padding: 40px; border-radius: 8px;">
-                    <h3 style="font-size: 28px; margin-bottom: 20px; color: #B8960C;">BLK Group (30-Day Cycles)</h3>
+                <div style="background: rgba(184,150,12,0.05); border: 1px solid rgba(184,150,12,0.2); border-left: 4px solid #B8960C; padding: 40px; border-radius: 8px;">
+                    <h3 style="font-size: 28px; color: #1a1a1a; margin-bottom: 20px; color: #B8960C;">BLK Group (30-Day Cycles)</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">✓ Fresh photos, updated copy every 30 days</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">✓ Repositioned as "new" to the market</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">✓ Constant marketing investment (we bear the cost)</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">✓ Strategic adjustments based on buyer feedback</li>
-                        <li style="margin-bottom: 16px; font-size: 16px; color: #ccc;">✓ Listing never looks "tired" or desperate</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Fresh photos, updated copy every 30 days</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Repositioned as "new" to the market</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Constant marketing investment (we bear the cost)</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Strategic adjustments based on buyer feedback</li>
+                        <li style="margin-bottom: 16px; font-size: 16px; color: #555;">✓ Listing never looks "tired" or desperate</li>
                     </ul>
                 </div>
             </div>
@@ -798,7 +802,7 @@
     
 
     <!-- WEEKLY PERFORMANCE DASHBOARD -->
-    <section style="padding: 100px 20px; background: #0a0a0a;">
+    <section style="padding: 100px 20px; background: #FAFAFA;">
         <div style="max-width: 1100px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 60px;">
                 <h2 class="section-title">You'll Always Know What's Happening</h2>
@@ -806,52 +810,52 @@
             </div>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
-                <div style="background: rgba(255,68,68,0.08); border: 1px solid rgba(255,68,68,0.2); border-radius: 8px; padding: 40px;">
-                    <h3 style="font-size: 24px; margin-bottom: 24px; color: #ff4444;">Most Agents</h3>
+                <div style="background: #FFF5F5; border: 1px solid rgba(255,68,68,0.2); border-radius: 8px; padding: 40px;">
+                    <h3 style="font-size: 24px; color: #1a1a1a; margin-bottom: 24px; color: #ff4444;">Most Agents</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #ff4444; flex-shrink: 0;">×</span>
                             <span>"I'll call you when I hear something"</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #ff4444; flex-shrink: 0;">×</span>
                             <span>No idea how many people viewed your listing</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #ff4444; flex-shrink: 0;">×</span>
                             <span>Don't track online engagement or interest</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #ff4444; flex-shrink: 0;">×</span>
                             <span>No follow-up strategy with interested buyers</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #ff4444; flex-shrink: 0;">×</span>
                             <span>You're left wondering what's actually happening</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div style="background: rgba(184,150,12,0.08); border: 1px solid rgba(184,150,12,0.2); border-radius: 8px; padding: 40px;">
-                    <h3 style="font-size: 24px; margin-bottom: 24px; color: #B8960C;">The BLK Group Weekly Dashboard</h3>
+                <div style="background: #FFFBF0; border: 1px solid rgba(184,150,12,0.2); border-radius: 8px; padding: 40px;">
+                    <h3 style="font-size: 24px; color: #1a1a1a; margin-bottom: 24px; color: #B8960C;">The BLK Group Weekly Dashboard</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #B8960C; flex-shrink: 0;">✓</span>
                             <span>Total online views (MLS, Zillow, Realtor.com)</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #B8960C; flex-shrink: 0;">✓</span>
                             <span>Number of potential buyers who saved/favorited</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #B8960C; flex-shrink: 0;">✓</span>
                             <span>Showing requests and buyer feedback</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #B8960C; flex-shrink: 0;">✓</span>
                             <span>Marketing performance (ad reach, engagement)</span>
                         </li>
-                        <li style="margin-bottom: 18px; font-size: 16px; color: #ccc; display: flex; gap: 12px;">
+                        <li style="margin-bottom: 18px; font-size: 16px; color: #555; display: flex; gap: 12px;">
                             <span style="color: #B8960C; flex-shrink: 0;">✓</span>
                             <span>Strategic adjustments to drive more showings</span>
                         </li>
@@ -859,9 +863,9 @@
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(184,150,12,0.1); border-radius: 8px;">
-                <h3 style="font-size: 28px; margin-bottom: 16px; font-weight: 700;">Weekly Updates. Real Data. Zero Ghosting.</h3>
-                <p style="font-size: 18px; color: #ccc; margin-bottom: 30px;">Every Friday, you'll know exactly how many potential buyers are interested and what we're doing to convert them into offers.</p>
+            <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(184,150,12,0.05); border: 1px solid rgba(184,150,12,0.2); border-radius: 8px;">
+                <h3 style="font-size: 28px; color: #1a1a1a; margin-bottom: 16px; font-weight: 700;">Weekly Updates. Real Data. Zero Ghosting.</h3>
+                <p style="font-size: 18px; color: #555; margin-bottom: 30px;">Every Friday, you'll know exactly how many potential buyers are interested and what we're doing to convert them into offers.</p>
                 <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">See How It Works - Free Strategy Call</button>
             </div>
         </div>
@@ -934,28 +938,28 @@
     
 
     <!-- SERVICE AREAS SECTION -->
-    <section style="padding: 80px 20px; background: #000;">
+    <section style="padding: 80px 20px; background: #FFFFFF;">
         <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-            <h2 style="font-size: 42px; font-weight: 800; margin-bottom: 20px;">We Have Local Agents In Your Area</h2>
-            <p style="font-size: 18px; color: #999; margin-bottom: 50px;">Serving Central Arkansas with local market expertise</p>
+            <h2 style="font-size: 42px; color: #1a1a1a; font-weight: 800; margin-bottom: 20px;">We Have Local Agents In Your Area</h2>
+            <p style="font-size: 18px; color: #666; margin-bottom: 50px;">Serving Central Arkansas with local market expertise</p>
             
             <div class="service-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 900px; margin: 0 auto;">
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Little Rock</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">North Little Rock</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Maumelle</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Conway</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Greenbrier</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Searcy</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Jacksonville</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Sherwood</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Benton</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Bryant</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Hot Springs</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Hot Springs Village</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Malvern</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Cabot</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Austin</div>
-                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 15px; font-weight: 500;">Beebe</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Little Rock</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">North Little Rock</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Maumelle</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Conway</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Greenbrier</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Searcy</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Jacksonville</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Sherwood</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Benton</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Bryant</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Hot Springs</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Hot Springs Village</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Malvern</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Cabot</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Austin</div>
+                <div style="padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 15px; font-weight: 500;">Beebe</div>
             </div>
         </div>
     </section>
@@ -963,7 +967,7 @@
     <!-- FINAL CTA -->
     <section class="final-cta">
         <h2>Ready To Get Your House Sold?</h2>
-        <p class="section-subtitle" style="color: #999;">Let's have a 15-minute conversation about your property.<br>No pressure. No obligations. Just straight talk.</p>
+        <p class="section-subtitle" style="color: #666;">Let's have a 15-minute conversation about your property.<br>No pressure. No obligations. Just straight talk.</p>
         
         <div class="final-cta-buttons">
             <button class="btn btn-gold" onclick="document.getElementById('leadForm').scrollIntoView({behavior: 'smooth'})">Get My Free Strategy Call</button>
@@ -978,7 +982,7 @@
             <h2 class="exit-title">Wait! Before You Go...</h2>
             <p class="exit-text">You've already wasted 6+ months with the wrong agent. Don't let it happen again.</p>
             <div class="exit-offer">TEXT "EXPIRED" TO (479) 857-5994<br>Get Our Free Guide: "Why Your House Didn't Sell"</div>
-            <p style="font-size: 14px; color: #999;">We'll text you "The 5 Reasons Your House Didn't Sell (And How To Fix Them)" in 60 seconds.</p>
+            <p style="font-size: 14px; color: #666;">We'll text you "The 5 Reasons Your House Didn't Sell (And How To Fix Them)" in 60 seconds.</p>
         </div>
     </div>
     
