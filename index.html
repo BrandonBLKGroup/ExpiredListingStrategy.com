@@ -1425,5 +1425,29 @@
         })();
     </script>
 
+
+    <!-- Background Audio -->
+    <audio id="bgAudio" loop>
+        <source src="fresh-strategy.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        // Handle audio autoplay (browsers restrict unmuted autoplay)
+        const audio = document.getElementById('bgAudio');
+        audio.volume = 0.3; // Set to 30% volume
+        
+        // Try to play on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            audio.play().catch(function(error) {
+                console.log('Autoplay prevented. Will play on first user interaction.');
+                // Play on first user interaction
+                document.body.addEventListener('click', function() {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+    </script>
+
 </body>
 </html>
