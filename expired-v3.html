@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Listing Expired. Let's Fix That. | The BLK Group</title>
+    <meta name="description" content="#1 Real Estate Team in Central Arkansas. 700+ Homes Sold. Your listing expired? We'll sell it in 30 days. 3% commission. No 6-month trap.">
+    
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #FFFFFF;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.95)), 
+                        url('https://theblk.group/parallax-1-new.jpg') center/cover;
+            padding: 120px 40px 80px;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            color: #000;
+        }
+        
+        .hero .subhead {
+            font-size: 28px;
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 50px;
+            line-height: 1.5;
+        }
+        
+        /* Proof Bar */
+        .proof-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #FAFAFA;
+            border-radius: 16px;
+        }
+        
+        .proof-item {
+            text-align: center;
+        }
+        
+        .proof-number {
+            display: block;
+            font-size: 48px;
+            font-weight: 700;
+            color: #7E9152;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .proof-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #7E9152;
+            color: #FFFFFF;
+            padding: 18px 45px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(126, 145, 82, 0.25);
+        }
+        
+        .cta-button:hover {
+            background: #6D7D48;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(126, 145, 82, 0.35);
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-alt {
+            background: #F8F9FA;
+        }
+        
+        .section h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000;
+            letter-spacing: -1px;
+        }
+        
+        .section p {
+            font-size: 20px;
+            color: #555;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.7;
+        }
+        
+        /* Brandon's Intro */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .intro-photo img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .intro-text h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .intro-text p {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #444;
+            line-height: 1.7;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .benefit-card {
+            background: #FFFFFF;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-card h4 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        
+        .benefit-card p {
+            text-align: left;
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Comparison Table */
+        .comparison {
+            max-width: 900px;
+            margin: 60px auto;
+            background: #FFFFFF;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: #E5E7EB;
+        }
+        
+        .comparison-cell {
+            background: #FFFFFF;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .comparison-cell.header {
+            background: #F8F9FA;
+            font-weight: 700;
+            font-size: 20px;
+            padding: 25px;
+        }
+        
+        .comparison-cell.same-agent {
+            background: #FEF3F3;
+        }
+        
+        .comparison-cell.new-agent {
+            background: #F0F7ED;
+        }
+        
+        .comparison-number {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .same-agent .comparison-number {
+            color: #DC2626;
+        }
+        
+        .new-agent .comparison-number {
+            color: #7E9152;
+        }
+        
+        /* Logo Circle (bottom left) */
+        .logo-circle {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 70px;
+            height: 70px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .logo-circle span {
+            color: #7E9152;
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+        
+        /* Form (Sticky on Desktop) */
+        .form-sticky {
+            position: fixed;
+            top: 120px;
+            right: 40px;
+            width: 400px;
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+            z-index: 50;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        
+        .form-sticky h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .form-sticky input,
+        .form-sticky textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+        }
+        
+        .form-sticky input:focus,
+        .form-sticky textarea:focus {
+            outline: none;
+            border-color: #7E9152;
+            box-shadow: 0 0 0 3px rgba(126, 145, 82, 0.1);
+        }
+        
+        .form-sticky button {
+            width: 100%;
+            background: #7E9152;
+            color: #FFFFFF;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .form-sticky button:hover {
+            background: #6D7D48;
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 1024px) {
+            .form-sticky {
+                position: static;
+                width: 100%;
+                margin: 40px auto;
+                max-width: 500px;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero .subhead {
+                font-size: 20px;
+            }
+            
+            .proof-bar {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .logo-circle {
+                bottom: 20px;
+                left: 20px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Circle (Bottom Left) -->
+    <div class="logo-circle">
+        <span>BLK</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Listing Expired.<br>Let's Fix That.</h1>
+            <p class="subhead">79% of realtors sold zero homes last year. 93% sold fewer than 10. You didn't fail—your agent did. We'll sell it in 30 days with our proven 3% commission strategy.</p>
+            
+            <div class="proof-bar">
+                <div class="proof-item">
+                    <span class="proof-number">700+</span>
+                    <span class="proof-label">Homes Sold</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">#1</span>
+                    <span class="proof-label">Team Central AR</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">3%</span>
+                    <span class="proof-label">Commission</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">30 Days</span>
+                    <span class="proof-label">Fresh Strategy</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">Top 0.1%</span>
+                    <span class="proof-label">Nationwide</span>
+                </div>
+            </div>
+            
+            <a href="#form" class="cta-button">Get Your Free Strategy →</a>
+        </div>
+    </section>
+
+    <!-- Brandon's Intro Section -->
+    <section class="section">
+        <div class="intro-grid">
+            <div class="intro-photo">
+                <img src="https://theblk.group/brandon-headshot.jpg" alt="Brandon Bruning">
+            </div>
+            <div class="intro-text">
+                <h3>Hi, I'm Brandon Bruning.</h3>
+                <p>Your home didn't sell—not because it's the wrong property, but because the last strategy was wrong.</p>
+                <p>In 12 years, I've seen the same mistakes over and over: overpricing, bad photos, zero promotion. That's why we built a 30-day system that treats every listing like it's the only one that matters.</p>
+                <p>We're not a call center. We're not an online service. We're real agents in Central Arkansas, and we'll sell your home or you walk away. No 6-month trap. Just results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Comparison -->
+    <section class="section section-alt">
+        <h2>The Numbers Don't Lie</h2>
+        <p>When an expired listing stays with the same agent, here's what happens:</p>
+        
+        <div class="comparison">
+            <div class="comparison-row">
+                <div class="comparison-cell header">Same Agent</div>
+                <div class="comparison-cell header">New Agent</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell same-agent">
+                    <div class="comparison-number">50%</div>
+                    <div>sell in 6+ months</div>
+                </div>
+                <div class="comparison-cell new-agent">
+                    <div class="comparison-number">70%+</div>
+                    <div>sell in 30-60 days</div>
+                </div>
+            </div>
+        </div>
+        
+        <p style="margin-top: 40px;">Fresh eyes. Fresh strategy. Fresh results.</p>
+    </section>
+
+    <!-- 30-Day Strategy -->
+    <section class="section">
+        <h2>Our 30-Day Strategy</h2>
+        <p>Here's exactly what we do differently:</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h4>1. Custom Marketing Plan</h4>
+                <p>Tailored strategy for your home—not a cookie-cutter approach.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>2. Professional Media</h4>
+                <p>Twilight photos, drone shots, walk-through videos. Premium presentation.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>3. Direct Mail Blitz</h4>
+                <p>Physical marketing to neighbors and qualified buyers.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>4. Social Media Push</h4>
+                <p>100,000+ eyeballs on your property in 30 days.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>5. Custom Website</h4>
+                <p>Dedicated listing site with your home's story.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>6. Weekly Check-Ins</h4>
+                <p>1-on-1 strategy sessions every week. Total transparency.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>7. 24/7 Access</h4>
+                <p>Text, call, email anytime. We're always available.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>8. Dual-Agent Team</h4>
+                <p>Two full-time agents working your listing.</p>
+            </div>
+            <div class="benefit-card">
+                <h4>9. Open Houses</h4>
+                <p>Regularly scheduled events to drive foot traffic.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="#form" class="cta-button">See What We'd Do For Your Home →</a>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-alt" id="form" style="text-align: center;">
+        <h2>Ready to Relaunch?</h2>
+        <p>Fill out the form below and we'll send you our complete 30-Day, 3% Commission Strategy—plus schedule a no-pressure strategy call if you'd like.</p>
+        
+        <form style="max-width: 500px; margin: 50px auto; background: #FFFFFF; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);" onsubmit="handleSubmit(event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="address" placeholder="Property Address" required>
+            <textarea name="notes" rows="3" placeholder="Tell us about your listing..."></textarea>
+            <button type="submit">Get My Free Strategy →</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #F8F9FA; padding: 60px 40px; text-align: center; color: #666; font-size: 14px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="margin-bottom: 20px;"><strong style="color: #000;">The BLK Group at LPT Realty</strong></p>
+            <p>700+ Homes Sold | #1 Team in Central Arkansas | Top 0.1% Nationwide</p>
+            <p style="margin-top: 20px;">11324 Arcade Drive, #23, Little Rock, AR 72212</p>
+            <p style="margin-top: 20px;">&copy; 2026 The BLK Group at LPT Realty. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Form Submission Script -->
+    <script>
+        async function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                address: form.address.value,
+                notes: form.notes.value,
+                source: 'ExpiredListingStrategy.com',
+                created_at: new Date().toISOString()
+            };
+            
+            // Submit to Supabase
+            try {
+                await fetch('https://fzlwkbhpsklsgkinwljt.supabase.co/rest/v1/sellers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.k3DC8UvCZ6U7Q5tujzH5YB55vfMC7sT2E4bJKlz-qM4',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                alert('Thank you! We\'ll be in touch within 24 hours with your personalized strategy.');
+                form.reset();
+            } catch (err) {
+                alert('Something went wrong. Please call us at (479) 857-5994.');
+            }
+        }
+    </script>
+
+</body>
+</html>
