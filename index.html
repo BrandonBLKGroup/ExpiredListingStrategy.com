@@ -34,13 +34,15 @@ section{padding:88px 0}
 .brand .sb{font-family:Archivo;font-weight:700;font-size:9.5px;letter-spacing:2.5px;color:#9A9A9A}
 .topcall{font-family:Archivo;font-weight:800;font-size:13px;letter-spacing:1.5px;color:var(--sage);text-decoration:none;border:1.5px solid var(--sage);padding:10px 18px}
 /* hero */
-.hero{background:var(--black);color:#fff;padding:96px 0 0 0}
+.hero{background:var(--black);color:#fff;padding:96px 0 0 0;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.heroghost{position:absolute;top:30px;right:-30px;font-family:Archivo,sans-serif;font-weight:900;font-size:560px;line-height:1;letter-spacing:-24px;color:transparent;-webkit-text-stroke:2.5px #2C2C2A;pointer-events:none;user-select:none;z-index:0}
 .hero h1{font-weight:900;font-size:clamp(44px,7vw,92px);letter-spacing:-2px}
 .hero .sub{font-family:Archivo;font-weight:800;font-size:clamp(16px,2.2vw,24px);letter-spacing:.5px;text-transform:uppercase;color:var(--sage);margin-top:18px}
 .hero p.lead{color:#D6D6D6;max-width:640px;margin-top:20px;font-size:18px}
 .scarce{font-family:Archivo;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C9A227;margin-top:22px}
 .statstrip{display:flex;border-top:1px solid #333;margin-top:64px}
-.statstrip>div{flex:1;padding:26px 16px 34px 0;border-right:1px solid #333}
+.statstrip>div{flex:1;padding:26px 12px 34px 12px;border-right:1px solid #333;text-align:center}
 .statstrip>div:last-child{border-right:none}
 .statstrip .n{font-family:Archivo;font-weight:900;font-size:clamp(26px,3.4vw,42px);letter-spacing:-1px}
 .statstrip .l{font-family:Archivo;font-weight:700;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#A6A49E;margin-top:6px}
@@ -76,11 +78,13 @@ h2.sect{font-weight:900;font-size:clamp(32px,4.6vw,56px);letter-spacing:-1.5px;m
 .cmp h3{font-size:18px;letter-spacing:1px;margin-bottom:16px}
 .cmp .side-b{background:var(--black);color:#fff}
 /* testimonials */
-.tcard{border:2px solid var(--ink);padding:26px;background:#fff}
+.tcard{border:2px solid var(--ink);padding:26px;background:#fff;color:var(--ink)}
 .tcard .q{font-size:15.5px;line-height:1.6}
 .tcard .who{font-family:Archivo;font-weight:800;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-top:14px;color:var(--green)}
 /* form */
-.leadform{background:#fff;border:2px solid var(--ink);padding:40px}
+.leadform{background:#fff;border:2px solid var(--ink);padding:40px;color:var(--ink)}
+.leadform .microhead{border-color:var(--ink);color:var(--ink)}
+.leadform input{color:var(--ink)}
 .leadform label{font-family:Archivo;font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:block;margin:18px 0 6px 0}
 .leadform input{width:100%;padding:16px;border:1.5px solid var(--ink);font-size:16px;font-family:Inter;background:var(--paper)}
 /* pills */
@@ -109,6 +113,7 @@ footer span{color:var(--sage)}
   .statstrip>div{flex:1 1 33%;border-bottom:1px solid #333}
   .capture form{flex-direction:column}
   .topcall{display:none}
+  .heroghost{font-size:290px;letter-spacing:-12px;top:70px;right:-40px}
   .mobilecall{display:block;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--sage);color:var(--black);text-align:center;padding:16px;font-family:Archivo;font-weight:900;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none}
 }
 </style>
@@ -128,6 +133,7 @@ footer span{color:var(--sage)}
 
 <!-- HERO -->
 <div class="hero">
+  <div class="heroghost">#1</div>
   <div class="wrap">
     <div class="kick on-dark">The 30-Day, 3% Marketing Strategy &middot; Central Arkansas</div>
     <h1 style="margin-top:16px">Your last agent<br>failed you.<br><span style="color:var(--sage)">We won't.</span></h1>
@@ -397,5 +403,43 @@ footer span{color:var(--sage)}
   </div>
 </div>
 
-<script src="form-handlers.js"></script></body>
+<script>
+// Submissions email Brandon instantly via FormSubmit (BrandonBLKGroup@gmail.com).
+// FIRST SUBMISSION ONLY: FormSubmit sends a one-time activation email - click Activate in Gmail, then all leads flow instantly.
+// SPARTAN 4: optionally also POST these to the CRM / lead board later; keep the email.
+var FS='https://formsubmit.co/ajax/BrandonBLKGroup@gmail.com';
+function sendInquiry(payload){
+  payload._template='table';
+  payload._captcha='false';
+  payload.page='expiredlistingstrategy.com';
+  return fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+}
+function captureEmail(e){
+  e.preventDefault();
+  var f=e.target;
+  var em=f.querySelector('input[type=email]').value;
+  sendInquiry({_subject:'NEW LEAD (email capture) - Expired Strategy site', email:em, wants:'10-page strategy PDF'});
+  var done=document.getElementById('emaildone');
+  if(done){done.style.display='block';}
+  f.querySelectorAll('input,button').forEach(function(el){el.disabled=true;});
+  return false;
+}
+function captureLead(e){
+  e.preventDefault();
+  sendInquiry({_subject:'NEW LEAD (strategy call) - Expired Strategy site',
+    name:document.getElementById('f-name').value,
+    phone:document.getElementById('f-phone').value,
+    property_address:document.getElementById('f-addr').value||'(not given)',
+    wants:'Free strategy call'});
+  document.getElementById('leaddone').style.display='block';
+  var f=e.target; f.querySelectorAll('input,button').forEach(function(el){el.disabled=true;});
+  return false;
+}
+// exit intent (desktop)
+var shown=false;
+document.addEventListener('mouseout',function(ev){
+  if(!shown && ev.clientY<=0 && !ev.relatedTarget){shown=true;document.getElementById('exitpop').style.display='flex';}
+});
+</script>
+</body>
 </html>
