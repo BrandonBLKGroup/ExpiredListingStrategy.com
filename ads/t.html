@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><title>ads</title>
+<script>
+/* The Meta pixel for AMPLIFIER's retargeting audiences. This page's own address carries only the audience name (?s=), never a
+   person or a street, and it is opened with the referrer cut to the bare site. Audiences in Ads Manager: URL contains s=<name>. */
+(function () {
+  var q = new URLSearchParams(location.search), s = (q.get('s') || '').replace(/[^a-z_]/g, ''), id = (q.get('p') || '').replace(/[^0-9]/g, '');
+  var OK = { expired_ca: 1, expired_nwa: 1, fsbo_ca: 1, fsbo_nwa: 1, general_ca: 1, general_nwa: 1 };
+  if (!id || !OK[s]) return;
+  !function(f,b,e,v,n,t,s2){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s2=b.getElementsByTagName(e)[0];s2.parentNode.insertBefore(t,s2)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', id);
+  fbq('track', 'PageView');
+  fbq('trackCustom', 'Audience', { audience: s });
+})();
+</script></head><body></body></html>
