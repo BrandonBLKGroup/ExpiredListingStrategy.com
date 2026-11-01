@@ -30,6 +30,7 @@
     '.pf-chrome{background:linear-gradient(180deg,#F7F8F9 0%,#DEE1E3 30%,#949AA0 52%,#EEF0F1 60%,#B6BABE 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}',
     '.pf-city{font:300 clamp(13px,1.6vw,17px) Montserrat,sans-serif;letter-spacing:6px;text-transform:uppercase;color:#ECEDEE;margin-top:20px}',
     '.pf-line{font-size:17px;line-height:1.6;max-width:580px;margin:30px 0 0;color:#C9CCCF}',
+    '.pf-dom{color:#fff;font-weight:600;white-space:nowrap;border-bottom:1px solid #949AA0;padding-bottom:1px}',
     '.pf-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}',
     '.pf-b{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;font:600 11px Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid #ECEDEE;transition:background .15s,color .15s}',
     '.pf-b1{background:#ECEDEE;color:#131313}.pf-b1:hover{background:#fff;color:#131313}',
@@ -55,6 +56,15 @@
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var prettyDate = function (ymd) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(ymd || ''); return m ? MONTHS[+m[2] - 1] + ' ' + (+m[3]) + ', ' + m[1] : ''; };
 
+  // Brandon's rule: 90 or more days on market (from the daily listing sheet) gets the special line. 89 or less gets the standard one.
+  var LONG_DOM = 90;
+  function lineHtml(street, dom) {
+    var st = '<b id="pfStreet" style="color:#ECEDEE;font-weight:600">' + esc(street) + '</b>';
+    var plan = ' Below is the exact 30-day, 3% plan we would run to put ' + st + ' back in front of every buyer in the market, and get it sold.';
+    if (dom >= LONG_DOM) return 'Your listing expired after <b class="pf-dom">' + dom + ' days</b>. Your house did not fail, the strategy did.' + plan;
+    return 'Your listing expired. Your house did not fail.' + plan;
+  }
+
   var hero = document.querySelector('.hero');
   if (!hero) return;
   hero.id = hero.id || 'pfPlan';
@@ -68,7 +78,7 @@
       '<div class="pf-for pf-in d2">Prepared for</div>' +
       '<h1 class="pf-addr pf-in d2"><span class="pf-chrome" id="pfAddr">' + esc(guess) + '</span></h1>' +
       '<div class="pf-city pf-in d3" id="pfCity">Central Arkansas</div>' +
-      '<p class="pf-line pf-in d3">Your listing expired. Your house did not fail. Below is the exact 30-day, 3% plan we would run to put <b id="pfStreet" style="color:#ECEDEE;font-weight:600">' + esc(guess) + '</b> back in front of every buyer in the market, and get it sold.</p>' +
+      '<p class="pf-line pf-in d3" id="pfLine">' + lineHtml(guess, null) + '</p>' +
       '<div class="pf-cta pf-in d3"><a class="pf-b pf-b1" href="#strategy">Get the full strategy</a><a class="pf-b pf-b2" href="#form">15-minute strategy call</a></div>' +
       '<div class="pf-by pf-in d4"><img src="/brandon-headshot.jpg" alt="Brandon Bruning"><div><b>Prepared by Brandon Bruning</b><span id="pfWhen">The BLK Group at LPT Realty &middot; (501) 398-9830</span></div></div>' +
       '<a class="pf-go pf-in d4" href="#' + hero.id + '">See your plan <i>&darr;</i></a>' +
@@ -89,7 +99,8 @@
     if (!r || !r.ok || !r.street) return;
     var street = titleCase(String(r.street).toLowerCase());
     document.getElementById('pfAddr').textContent = street;
-    document.getElementById('pfStreet').textContent = street;
+    var dom = parseInt(r.dom, 10);
+    document.getElementById('pfLine').innerHTML = lineHtml(street, isNaN(dom) ? null : dom);
     if (r.city) document.getElementById('pfCity').textContent = r.city + ', Arkansas';
     var d = prettyDate(r.prepared);
     if (d) document.getElementById('pfWhen').innerHTML = 'The BLK Group at LPT Realty &middot; ' + esc(d);
