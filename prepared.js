@@ -10,6 +10,10 @@
   if (!/^\d+[a-z]?-[a-z0-9-]+$/.test(path)) return; // only personal links like /4-ligadura-ln
   var slug = path.slice(0, 80);
   var preview = /[?&]preview\b/.test(location.search);
+  var qs = new URLSearchParams(location.search);
+  var via = qs.get('via') === 'mail' ? 'mail' : '';          // came from the QR code on their mailer
+  var drop = /^\d{4}-\d{2}-\d{2}$/.test(qs.get('d') || '') ? qs.get('d') : '';
+  if (via || drop) { try { history.replaceState(null, '', location.pathname + (preview ? '?preview=1' : '') + location.hash); } catch (e) {} } // keep their clean address URL
   var BOARD = 'https://blk-leads-production.up.railway.app/api/public/els-visit';
   window.ELS_SLUG = slug;
 
@@ -114,7 +118,7 @@
     sent = true;
     try {
       // text/plain keeps this a simple request (no preflight). The board ignores link-preview bots and ?preview opens.
-      fetch(BOARD, { method: 'POST', headers: { 'content-type': 'text/plain' }, body: JSON.stringify({ slug: slug, ref: document.referrer || '', preview: preview }) })
+      fetch(BOARD, { method: 'POST', headers: { 'content-type': 'text/plain' }, body: JSON.stringify({ slug: slug, ref: document.referrer || '', preview: preview, via: via, d: drop }) })
         .then(function (r) { return r.json(); }).then(show).catch(function () {});
     } catch (e) {}
   }
