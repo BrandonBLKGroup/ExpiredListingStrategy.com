@@ -2,7 +2,7 @@
    Stays off (buttons scroll to the call-back form like before) until CALENDLY is set to his public booking link. */
 (function () {
   'use strict';
-  var CALENDLY = ''; // e.g. 'https://calendly.com/your-name/15min'. Public booking link, safe to keep here.
+  var CALENDLY = 'https://calendly.com/brandonblkgroup/30min'; // Brandon's public booking link
   if (!CALENDLY) return;
   var BOARD = 'https://blk-leads-production.up.railway.app/api/public/inquiry';
 
