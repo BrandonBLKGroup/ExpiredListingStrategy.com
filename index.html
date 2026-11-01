@@ -102,6 +102,16 @@ footer span{color:var(--sage)}
 #exitpop{display:none;position:fixed;inset:0;background:rgba(10,10,9,.82);z-index:100;align-items:center;justify-content:center;padding:24px}
 #exitpop .inner{background:var(--paper);max-width:520px;width:100%;padding:40px;position:relative;border:3px solid var(--black)}
 #exitpop .x{position:absolute;top:12px;right:18px;font-size:26px;cursor:pointer;font-family:Archivo;font-weight:800}
+#exitpop .pk{display:grid;grid-template-columns:136px 1fr;gap:24px;align-items:center}
+#exitpop .pk-img{position:relative;transform:rotate(-4deg);animation:pkIn .7s cubic-bezier(.2,.7,.2,1) both}
+#exitpop .pk-img img{display:block;width:100%;height:auto}
+#exitpop .pk-tag{position:absolute;right:-10px;bottom:10px;background:var(--black);color:#fff;font-family:Archivo,sans-serif;font-weight:800;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 9px;transform:rotate(4deg);box-shadow:0 4px 10px rgba(0,0,0,.25)}
+#exitpop .pk h2{font-size:26px;margin:10px 0 8px}
+#exitpop .pk-sub{font-size:15px;line-height:1.45;color:var(--muted)}
+#exitpop .pk-sub b{color:var(--ink)}
+@keyframes pkIn{from{opacity:0;transform:translateY(12px) rotate(-12deg)}to{opacity:1;transform:rotate(-4deg)}}
+@media(max-width:520px){#exitpop .inner{padding:50px 22px 26px}#exitpop .pk .kick{letter-spacing:3px}#exitpop .pk{grid-template-columns:100px 1fr;gap:18px}#exitpop .pk h2{font-size:21px}#exitpop .pk-sub{font-size:14px}}
+@media(prefers-reduced-motion:reduce){#exitpop .pk-img{animation:none}}
 .mobilecall{display:none}
 @media(max-width:860px){
   section{padding:56px 0}
@@ -404,14 +414,16 @@ footer span{color:var(--sage)}
 <div id="exitpop">
   <div class="inner">
     <div class="x" onclick="document.getElementById('exitpop').style.display='none'">&#10005;</div>
-    <div class="kick">Before you go</div>
-    <h2 style="font-size:26px;margin:10px 0">Take the strategy with you. The full 10-page plan, free. Read it tonight.</h2>
+    <div class="pk">
+      <div class="pk-img"><img src="/strategy-stack.png" alt="The Expired Listing Strategy: the full 10-page plan" width="300" height="371"><span class="pk-tag">10 pages</span></div>
+      <div><div class="kick">Before you go</div><h2>Take the strategy with you.</h2><div class="pk-sub">The full <b>10-page plan</b>, free. Read it tonight.</div></div>
+    </div>
     <a class="btn btn-solid" style="width:100%;text-align:center;margin-top:14px" href="sms:5013989830?&body=EXPIRED">Text "EXPIRED" to (501) 398-9830</a>
     <div style="font-size:13px;color:var(--muted);margin-top:8px">Your text app will open with the message pre-filled. Just hit send!</div>
     <div style="text-align:center;font-family:Archivo;font-weight:800;letter-spacing:2px;margin:16px 0;color:var(--muted)">OR</div>
     <!-- SPARTAN 4: wire to email capture -->
     <form onsubmit="return captureEmail(event)">
-      <input type="email" placeholder="Your email for the free 10-page strategy" required style="width:100%;padding:15px;border:1.5px solid var(--ink);font-size:15px">
+      <input type="email" placeholder="Your email address" required style="width:100%;padding:15px;border:1.5px solid var(--ink);font-size:15px">
       <button class="btn btn-solid" type="submit" style="width:100%;margin-top:10px">Send Me The Free Guide</button>
     </form>
   </div>
