@@ -83,7 +83,7 @@
       '<h1 class="pf-addr pf-in d2"><span class="pf-chrome" id="pfAddr">' + esc(guess) + '</span></h1>' +
       '<div class="pf-city pf-in d3" id="pfCity">Central Arkansas</div>' +
       '<p class="pf-line pf-in d3" id="pfLine">' + lineHtml(guess, null) + '</p>' +
-      '<div class="pf-cta pf-in d3"><a class="pf-b pf-b1" href="#strategy">Get the full strategy</a><a class="pf-b pf-b2" href="#form">15-minute strategy call</a><a class="pf-b pf-b2" href="https://blk-leads-production.up.railway.app/r/' + slug + '.pdf' + (preview ? '?preview=1' : '') + '" target="_blank" rel="noopener">Your 30-day plan (PDF)</a></div>' +
+      '<div class="pf-cta pf-in d3"><a class="pf-b pf-b1" href="#strategy">Get the full strategy</a><a class="pf-b pf-b2" href="#form">15-minute strategy call</a><a class="pf-b pf-b2" href="/' + slug + '/SeeYourStrategy' + (preview ? '?preview=1' : '') + '" target="_blank" rel="noopener">Your 30-day plan (PDF)</a></div>' +
       '<div class="pf-by pf-in d4"><img src="/brandon-headshot.jpg" alt="Brandon Bruning"><div><b>Prepared by Brandon Bruning</b><span id="pfWhen">The BLK Group at LPT Realty &middot; (501) 398-9830</span></div></div>' +
       '<a class="pf-go pf-in d4" href="#' + hero.id + '">See your plan <i>&darr;</i></a>' +
     '</div>';

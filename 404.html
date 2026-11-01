@@ -7,10 +7,13 @@
 <title>Expired Listing Strategy | The BLK Group</title>
 <style>html,body{margin:0;background:#151513}</style>
 <script>
-/* Personal links (ExpiredListingStrategy.com/4-ligadura-ln) have no file of their own. This page loads the real site in place,
+/* Personal links (ExpiredListingStrategy.com/4-ligadura-ln, and /4-ligadura-ln/SeeYourStrategy for their plan PDF) have no file of their own. This page loads the real site in place,
    keeping their address in the URL; prepared.js then adds the "Prepared for" opener. Any other missing page goes home. */
 (function () {
   var p = location.pathname.replace(/^\/+/, '');
+  // ExpiredListingStrategy.com/<address>/SeeYourStrategy opens their personalized 30-day plan PDF (built by the lead board).
+  var plan = p.match(/^(\d+[a-z]?-[a-z0-9-]+)\/seeyourstrategy\/?$/i);
+  if (plan) { fetch('/plan.html', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (h) { document.open(); document.write(h); document.close(); }).catch(function () { location.replace('/' + plan[1].toLowerCase()); }); return; }
   if (!/^\d+[a-z]?-[a-z0-9-]+\/?$/i.test(p)) { location.replace('/'); return; }
   if (/\/$/.test(p)) history.replaceState(null, '', '/' + p.replace(/\/+$/, '') + location.search + location.hash);
   fetch('/index.html', { cache: 'no-cache' })
