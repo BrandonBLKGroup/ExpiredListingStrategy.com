@@ -1,4 +1,5 @@
-/* Personal pages: ExpiredListingStrategy.com/<their-address> shows the full site with a "Prepared for" opener on top.
+/* Personal pages: ExpiredListingStrategy.com/<their-address> shows the full site with a "Prepared for" opener on top,
+   in the BLK brand: black, chrome display type, Montserrat tracked labels, Inter body.
    The address comes from the link itself and is confirmed by Brandon's lead board, which also logs the open on their lead.
    Nothing about any lead is stored in this file or this repo. */
 (function () {
@@ -12,36 +13,51 @@
   var BOARD = 'https://blk-leads-production.up.railway.app/api/public/els-visit';
   window.ELS_SLUG = slug;
 
+  var font = document.createElement('link');
+  font.rel = 'stylesheet';
+  font.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap';
+  document.head.appendChild(font);
+
   var css = document.createElement('style');
   css.textContent = [
-    '.pf{position:relative;overflow:hidden;background:var(--paper,#FAFAF8);color:var(--ink,#1D1D1F);min-height:calc(100vh - 70px);min-height:calc(100svh - 70px);display:flex;align-items:center;padding:64px 0 72px;border-bottom:1px solid var(--line,#E3E1DC)}',
+    '.pf{position:relative;overflow:hidden;background:#131313;color:#ECEDEE;min-height:calc(100vh - 70px);min-height:calc(100svh - 70px);display:flex;align-items:center;padding:72px 0 84px;border-bottom:1px solid #2C2C2A;font-family:Inter,-apple-system,system-ui,sans-serif}',
     '.pf .wrap{position:relative;z-index:1;width:100%}',
-    '.pf-ghost{position:absolute;right:-24px;bottom:-60px;font:900 clamp(260px,46vw,620px)/.8 Archivo,sans-serif;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:2px #E6E4DF;pointer-events:none;user-select:none;z-index:0}',
-    '.pf-kick{font:800 12px Archivo,sans-serif;letter-spacing:3.5px;text-transform:uppercase;color:var(--muted,#6B6B68)}',
-    '.pf-for{font:800 13px Archivo,sans-serif;letter-spacing:4px;text-transform:uppercase;margin-top:44px;display:flex;align-items:center;gap:14px}',
-    '.pf-for:after{content:"";height:2px;width:56px;background:var(--ink,#1D1D1F)}',
-    '.pf-addr{font:900 clamp(46px,9.5vw,132px)/.9 Archivo,sans-serif;letter-spacing:-.035em;text-transform:uppercase;margin-top:14px;overflow-wrap:anywhere}',
-    '.pf-city{font:800 clamp(15px,2vw,22px) Archivo,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--muted,#6B6B68);margin-top:18px}',
-    '.pf-line{font-size:18px;max-width:560px;margin-top:28px;color:#3A3A38}',
-    '.pf-by{display:flex;align-items:center;gap:14px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line,#E3E1DC);max-width:560px}',
-    '.pf-by img{width:52px;height:52px;border-radius:50%;object-fit:cover;filter:grayscale(1)}',
-    '.pf-by b{display:block;font:800 14px Archivo,sans-serif;letter-spacing:1.5px;text-transform:uppercase}',
-    '.pf-by span{display:block;font-size:13px;line-height:1.45;color:var(--muted,#6B6B68);margin-top:3px}',
-    '.pf-go{display:inline-flex;align-items:center;gap:12px;margin-top:40px;font:800 13px Archivo,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--ink,#1D1D1F);text-decoration:none;border-bottom:2px solid var(--ink,#1D1D1F);padding-bottom:6px}',
-    '.pf-go i{font-style:normal;display:inline-block;animation:pfBob 1.8s ease-in-out infinite}',
+    '.pf-ghost{position:absolute;right:-30px;bottom:-70px;font:900 clamp(280px,48vw,640px)/.8 Archivo,sans-serif;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:2px #262628;pointer-events:none;user-select:none;z-index:0}',
+    '.pf-kick{font:500 11px Montserrat,sans-serif;letter-spacing:6px;text-transform:uppercase;color:#9FA4A8}',
+    '.pf-for{font:500 12px Montserrat,sans-serif;letter-spacing:6px;text-transform:uppercase;color:#D9DBDD;margin-top:46px;display:flex;align-items:center;gap:16px}',
+    '.pf-for:after{content:"";height:1px;width:64px;background:linear-gradient(90deg,#F7F8F9,#949AA0 55%,#2C2C2A)}',
+    '.pf-addr{font:900 clamp(50px,10vw,140px)/.92 Archivo,sans-serif;letter-spacing:-.03em;text-transform:uppercase;margin:16px 0 0;overflow-wrap:anywhere}',
+    '.pf-chrome{background:linear-gradient(180deg,#F7F8F9 0%,#DEE1E3 30%,#949AA0 52%,#EEF0F1 60%,#B6BABE 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}',
+    '.pf-city{font:300 clamp(13px,1.6vw,17px) Montserrat,sans-serif;letter-spacing:6px;text-transform:uppercase;color:#ECEDEE;margin-top:20px}',
+    '.pf-line{font-size:17px;line-height:1.6;max-width:580px;margin:30px 0 0;color:#C9CCCF}',
+    '.pf-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}',
+    '.pf-b{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;font:600 11px Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid #ECEDEE;transition:background .15s,color .15s}',
+    '.pf-b1{background:#ECEDEE;color:#131313}.pf-b1:hover{background:#fff;color:#131313}',
+    '.pf-b2{background:transparent;color:#ECEDEE;border-color:#5E6266}.pf-b2:hover{border-color:#ECEDEE;color:#fff}',
+    '.pf-by{display:flex;align-items:center;gap:14px;margin-top:40px;padding-top:24px;border-top:1px solid #2C2C2A;max-width:580px}',
+    '.pf-by img{width:48px;height:48px;border-radius:50%;object-fit:cover;filter:grayscale(1) contrast(1.05)}',
+    '.pf-by b{display:block;font:600 11px Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#ECEDEE}',
+    '.pf-by span{display:block;font-size:12.5px;line-height:1.45;color:#9FA4A8;margin-top:4px}',
+    '.pf-go{display:inline-flex;align-items:center;gap:12px;margin-top:34px;font:500 11px Montserrat,sans-serif;letter-spacing:5px;text-transform:uppercase;color:#9FA4A8;text-decoration:none}',
+    '.pf-go:hover{color:#fff}.pf-go i{font-style:normal;display:inline-block;animation:pfBob 1.8s ease-in-out infinite}',
     '.pf-in{opacity:0;transform:translateY(14px);animation:pfIn .8s cubic-bezier(.2,.7,.2,1) forwards}',
     '.pf-in.d2{animation-delay:.15s}.pf-in.d3{animation-delay:.3s}.pf-in.d4{animation-delay:.45s}',
     '@keyframes pfIn{to{opacity:1;transform:none}}@keyframes pfBob{50%{transform:translateY(4px)}}',
     '@media (prefers-reduced-motion:reduce){.pf-in{opacity:1;transform:none;animation:none}.pf-go i{animation:none}}',
-    '@media (max-width:640px){.pf{min-height:0;padding:52px 0 60px}.pf-for{margin-top:30px}.pf-line{font-size:16px}.pf-ghost{bottom:-30px}}'
+    '@media (max-width:640px){.pf{padding:56px 0 64px}.pf-kick{letter-spacing:3.5px}.pf-for{letter-spacing:5px}.pf-city{letter-spacing:4px}.pf-for{margin-top:34px}.pf-line{font-size:16px}.pf-b{width:100%}.pf-ghost{bottom:-40px}}'
   ].join('\n');
   document.head.appendChild(css);
 
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
-  var guess = slug.replace(/-/g, ' ');
+  var titleCase = function (s) { return s.replace(/\b\w/g, function (c) { return c.toUpperCase(); }).replace(/\b(Ne|Nw|Se|Sw)\b/g, function (d) { return d.toUpperCase(); }); };
+  var guess = titleCase(slug.replace(/-/g, ' '));
   var num = (slug.match(/^\d+/) || [''])[0];
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var prettyDate = function (ymd) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(ymd || ''); return m ? MONTHS[+m[2] - 1] + ' ' + (+m[3]) + ', ' + m[1] : ''; };
+
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  hero.id = hero.id || 'pfPlan';
 
   var sec = document.createElement('section');
   sec.className = 'pf'; sec.setAttribute('aria-label', 'Prepared for your home');
@@ -50,28 +66,36 @@
     '<div class="wrap">' +
       '<div class="pf-kick pf-in">A private marketing strategy</div>' +
       '<div class="pf-for pf-in d2">Prepared for</div>' +
-      '<h1 class="pf-addr pf-in d2" id="pfAddr">' + esc(guess) + '</h1>' +
-      '<div class="pf-city pf-in d3" id="pfCity"></div>' +
-      '<p class="pf-line pf-in d3">Below is the exact 30-day plan we would run to put your home back in front of every buyer in the market, and get it sold.</p>' +
+      '<h1 class="pf-addr pf-in d2"><span class="pf-chrome" id="pfAddr">' + esc(guess) + '</span></h1>' +
+      '<div class="pf-city pf-in d3" id="pfCity">Central Arkansas</div>' +
+      '<p class="pf-line pf-in d3">Your listing expired. Your house did not fail. Below is the exact 30-day, 3% plan we would run to put <b id="pfStreet" style="color:#ECEDEE;font-weight:600">' + esc(guess) + '</b> back in front of every buyer in the market, and get it sold.</p>' +
+      '<div class="pf-cta pf-in d3"><a class="pf-b pf-b1" href="#strategy">Get the full strategy</a><a class="pf-b pf-b2" href="#form">15-minute strategy call</a></div>' +
       '<div class="pf-by pf-in d4"><img src="/brandon-headshot.jpg" alt="Brandon Bruning"><div><b>Prepared by Brandon Bruning</b><span id="pfWhen">The BLK Group at LPT Realty &middot; (501) 398-9830</span></div></div>' +
-      '<a class="pf-go pf-in d4" href="#pfPlan">See your plan <i>&darr;</i></a>' +
+      '<a class="pf-go pf-in d4" href="#' + hero.id + '">See your plan <i>&darr;</i></a>' +
     '</div>';
-  var hero = document.querySelector('.hero');
-  if (!hero) return;
-  hero.id = hero.id || 'pfPlan';
-  sec.querySelector('.pf-go').setAttribute('href', '#' + hero.id);
   hero.parentNode.insertBefore(sec, hero);
-  document.title = 'Prepared for ' + guess.replace(/\b\w/g, function (c) { return c.toUpperCase(); }) + ' | The BLK Group';
+
+  // Make the two asks further down speak to their house too.
+  function personalize(street) {
+    var h = document.querySelector('#strategy h2');
+    if (h) h.innerHTML = 'Get the full 10-page strategy for <span style="white-space:nowrap">' + esc(street) + '</span>. Free.';
+    var m = document.querySelector('#leadform .microhead');
+    if (m) m.textContent = 'Free strategy call for ' + street;
+    document.title = 'Prepared for ' + street + ' | The BLK Group';
+  }
+  personalize(guess);
 
   function show(r) {
     if (!r || !r.ok || !r.street) return;
-    document.getElementById('pfAddr').textContent = r.street;
+    var street = titleCase(String(r.street).toLowerCase());
+    document.getElementById('pfAddr').textContent = street;
+    document.getElementById('pfStreet').textContent = street;
     if (r.city) document.getElementById('pfCity').textContent = r.city + ', Arkansas';
     var d = prettyDate(r.prepared);
     if (d) document.getElementById('pfWhen').innerHTML = 'The BLK Group at LPT Realty &middot; ' + esc(d);
-    document.title = 'Prepared for ' + r.street + ' | The BLK Group';
+    personalize(street);
     var a = document.getElementById('f-addr');
-    if (a && !a.value) a.value = r.street + (r.city ? ', ' + r.city : '');
+    if (a && !a.value) a.value = street + (r.city ? ', ' + r.city : '');
   }
   var sent = false;
   function report() {
