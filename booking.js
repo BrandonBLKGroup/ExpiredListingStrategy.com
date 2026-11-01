@@ -25,6 +25,7 @@
     '.bk-ul li{padding:7px 0 7px 22px;position:relative}.bk-ul li:before{content:"";position:absolute;left:0;top:15px;width:10px;height:1px;background:#949AA0}',
     '.bk-alt{display:inline-block;margin-top:22px;font:500 10.5px Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#9FA4A8;border-bottom:1px solid #5E6266;padding-bottom:4px;cursor:pointer;background:none;border-top:0;border-left:0;border-right:0}',
     '.bk-alt:hover{color:#fff}',
+    '.bk-links{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:8px}.bk-alt{text-decoration:none}',
     '.bk-r{position:relative;min-height:660px;background:#fff}',
     '.bk-r .calendly-inline-widget,.bk-r iframe{width:100%;height:100%;min-height:660px;border:0}',
     '.bk-x{position:absolute;top:10px;right:10px;z-index:3;width:40px;height:40px;border:1px solid #2C2C2A;background:#131313;color:#ECEDEE;font:400 22px/1 Inter,sans-serif;cursor:pointer}',
@@ -32,7 +33,7 @@
     '@media (max-width:820px){.bk{padding:0;align-items:stretch}.bk-p{grid-template-columns:1fr;max-height:none;height:100%;overflow:auto;border:0}',
     '.bk-l{display:grid;grid-template-columns:64px 1fr;gap:0 14px;align-items:center;padding:18px 64px 16px 18px;border-right:0;border-bottom:1px solid #2C2C2A;overflow:visible}',
     '.bk-l img{width:64px;height:64px;grid-row:span 3}.bk-k{margin-top:0;letter-spacing:3.5px}.bk-n{font-size:21px;margin-top:4px;white-space:nowrap}.bk-t{margin-top:5px;letter-spacing:1.5px;font-size:9.5px}',
-    '.bk-h,.bk-ul{display:none}.bk-alt{grid-column:1/-1;justify-self:start;margin-top:12px;letter-spacing:2px;font-size:9.5px}.bk-r{min-height:720px}}'
+    '.bk-h,.bk-ul{display:none}.bk-links{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:4px 16px;margin-top:6px}.bk-alt{margin-top:6px;letter-spacing:1.5px;font-size:9px}.bk-r{min-height:720px}}'
   ].join('\n');
   document.head.appendChild(css);
 
@@ -49,7 +50,7 @@
         '<div class="bk-t">Team Leader &middot; The BLK Group</div>' +
         '<div class="bk-h" id="bkFor">Pick a time that works for you<span>A real conversation, not a script.</span></div>' +
         '<ul class="bk-ul"><li>What happened with your listing, in real numbers</li><li>Exactly what we would change, specific to your home</li><li>No pressure. Keep the plan either way.</li></ul>' +
-        '<button class="bk-alt" type="button" id="bkAlt">Rather we call you? Leave your number</button>' +
+        '<div class="bk-links"><button class="bk-alt" type="button" id="bkAlt">Rather we call you? Leave your number</button><a class="bk-alt" id="bkNew" href="' + CALENDLY + '" target="_blank" rel="noopener">Calendar not showing? Open it here</a></div>' +
       '</div>' +
       '<div class="bk-r"><div class="bk-load">Loading the calendar</div><div id="bkCal"></div></div>' +
     '</div>';
@@ -64,6 +65,7 @@
     return u;
   }
   function loadCal() {
+    document.getElementById('bkNew').href = calUrl();
     if (loaded) return; loaded = true;
     var host = document.getElementById('bkCal');
     var f = document.createElement('iframe');
