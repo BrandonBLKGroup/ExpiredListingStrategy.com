@@ -12,6 +12,8 @@
 (function () {
   var p = location.pathname.replace(/^\/+/, '');
   // ExpiredListingStrategy.com/<address>/SeeYourStrategy opens their personalized 30-day plan PDF (built by the lead board).
+  var why = p.match(/^(\d+[a-z]?-[a-z0-9-]+)\/whylistingsexpire\/?$/i);
+  if (why) { fetch('/why.html', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (h) { document.open(); document.write(h); document.close(); }).catch(function () { location.replace('/' + why[1].toLowerCase()); }); return; }
   var plan = p.match(/^(\d+[a-z]?-[a-z0-9-]+)\/seeyourstrategy\/?$/i);
   if (plan) { fetch('/plan.html', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (h) { document.open(); document.write(h); document.close(); }).catch(function () { location.replace('/' + plan[1].toLowerCase()); }); return; }
   if (!/^\d+[a-z]?-[a-z0-9-]+\/?$/i.test(p)) { location.replace('/'); return; }

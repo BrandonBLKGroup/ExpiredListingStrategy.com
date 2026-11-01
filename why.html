@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Why Listings Expire · The BLK Group at LPT Realty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Inter:wght@400;500;600&family=Montserrat:wght@300;500;600&display=swap">
+<style>
+/* ExpiredListingStrategy.com/<address>/WhyListingsExpire: the free Why Listings Expire guide (Text 2, the education), shown right here
+   with a one-tap download. The guide is the same for everyone; the link is theirs, so opening it lights up their lead on the board. */
+:root{--bg:#131313;--line:#2C2C2A;--ink:#ECEDEE;--muted:#9FA4A8;--soft:#C9CCCF}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font:400 16px/1.5 Inter,-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+.ch{background:linear-gradient(180deg,#F7F8F9 0%,#DEE1E3 30%,#949AA0 52%,#EEF0F1 60%,#B6BABE 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.lock{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.lock img.d{width:36px;height:36px;filter:invert(1)}
+.lock b{font:600 11px Montserrat,sans-serif;letter-spacing:4px;text-transform:uppercase;white-space:nowrap}
+.lock i{width:1px;height:26px;background:#5E6266}
+.lock img.l{height:22px;display:block}
+.top .tag{font:500 10px Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.head .wrap{padding-top:40px;padding-bottom:24px}
+.lab{font:500 11px Montserrat,sans-serif;letter-spacing:5px;text-transform:uppercase;color:var(--muted)}
+h1{font:900 clamp(40px,8vw,88px)/.92 Archivo,sans-serif;letter-spacing:-.03em;text-transform:uppercase;margin-top:12px;overflow-wrap:anywhere}
+.city{font:300 13px Montserrat,sans-serif;letter-spacing:5px;text-transform:uppercase;margin-top:14px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(19,19,19,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;gap:10px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.b{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;font:600 11px Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid #ECEDEE;color:var(--ink);background:transparent;cursor:pointer}
+.b1{background:#ECEDEE;color:#131313}
+.b3{border-color:#5E6266}
+.pages .wrap{padding-top:22px;padding-bottom:40px;display:flex;flex-direction:column;gap:18px;align-items:center}
+.pages canvas{width:100%;max-width:900px;height:auto;display:block;box-shadow:0 10px 40px rgba(0,0,0,.5);background:#fff}
+.load{font:500 11px Montserrat,sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--muted);padding:40px 0;text-align:center}
+.err{color:#E9A49D}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-top:20px;padding-bottom:36px;font-size:12px;color:#7A7F84}
+footer b{color:#B6BABE;font-weight:600}
+@media (max-width:640px){.bar{position:static}.bar .b{flex:1 1 100%}.lock b{font-size:9.5px;letter-spacing:3px}.lock img.l{height:19px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="lock" href="/" id="homeLink"><img class="d" src="/blk-logo.png" alt=""><b>The BLK Group</b><i></i><img class="l" src="/lpt-white.png" alt="LPT Realty"></a>
+  <div class="tag">Home of the 30-Day, 3% Listing Strategy</div>
+</div></header>
+<section class="head"><div class="wrap">
+  <div class="lab">A free guide · Prepared for <span id="addr2">your home</span></div>
+  <h1><span class="ch">Why listings expire.</span></h1>
+  <div class="city" id="city">The 2026 guide for Arkansas homeowners</div>
+</div></section>
+<div class="bar"><div class="wrap">
+  <a class="b b1" id="dl" href="/why-listings-expire.pdf" download="Why-Listings-Expire-2026.pdf">Download the guide</a>
+  <a class="b" href="https://calendly.com/brandonblkgroup/30min" target="_blank" rel="noopener">Book a 15-minute call</a>
+  <a class="b b3" id="back" href="/">See your full strategy page</a>
+</div></div>
+<section class="pages"><div class="wrap" id="pages"><div class="load" id="load">Opening the guide</div></div></section>
+<footer><div class="wrap"><b>The BLK Group at LPT Realty</b> · TheBLK.Group · (501) 398-9830. If your home is currently listed with another brokerage, please disregard this. It is not intended to solicit listings already under agreement.</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  var m = location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase().match(/^(\d+[a-z]?-[a-z0-9-]+)\/whylistingsexpire$/);
+  if (!m) { location.replace('/'); return; }
+  var slug = m[1], preview = /[?&]preview\b/.test(location.search);
+  var BOARD = 'https://blk-leads-production.up.railway.app';
+  var $ = function (id) { return document.getElementById(id); };
+  var tc = function (s) { return String(s || '').toLowerCase().replace(/\b\w/g, function (c) { return c.toUpperCase(); }).replace(/\b(Ne|Nw|Se|Sw)\b/g, function (d) { return d.toUpperCase(); }); };
+  var street = tc(slug.replace(/-/g, ' '));
+  $('addr2').textContent = street; $('back').href = '/' + slug + (preview ? '?preview=1' : '');
+  document.title = 'Why Listings Expire · Prepared for ' + street + ' · The BLK Group';
+  // Counts as an open on their lead ("Opened Why Listings Expire"). Brandon's ?preview opens and link-preview bots are not counted.
+  var sent = false;
+  function report() {
+    if (sent || document.visibilityState === 'hidden') return; sent = true;
+    try { fetch(BOARD + '/api/public/els-visit', { method: 'POST', headers: { 'content-type': 'text/plain' }, body: JSON.stringify({ slug: slug, ref: document.referrer || '', preview: preview, via: 'wle' }) })
+      .then(function (r) { return r.json(); }).then(function (r) { if (r && r.ok && r.street) { street = tc(r.street); $('addr2').textContent = street; document.title = 'Why Listings Expire · Prepared for ' + street + ' · The BLK Group'; } }).catch(function () {}); } catch (e) {}
+  }
+  report(); document.addEventListener('visibilitychange', report);
+  fetch('/why-listings-expire.pdf')
+    .then(function (r) { if (!r.ok) throw new Error('not found'); return r.arrayBuffer(); })
+    .then(function (buf) {
+      if (!window.pdfjsLib) { $('load').textContent = 'The guide is ready. Tap Download the guide.'; return; }
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      return pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise.then(function (pdf) {
+        $('load').remove();
+        var chain = Promise.resolve();
+        for (var i = 1; i <= pdf.numPages; i++) (function (n) {
+          chain = chain.then(function () { return pdf.getPage(n).then(function (page) {
+            var w = Math.min(900, $('pages').clientWidth) * Math.min(2.5, (window.devicePixelRatio || 1) * 1.2);
+            var vp = page.getViewport({ scale: w / page.getViewport({ scale: 1 }).width });
+            var c = document.createElement('canvas'); c.width = Math.floor(vp.width); c.height = Math.floor(vp.height);
+            $('pages').appendChild(c);
+            return page.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+          }); });
+        })(i);
+        return chain;
+      });
+    })
+    .catch(function () { var l = $('load'); if (l) { l.className = 'load err'; l.textContent = 'We could not open the guide here. Tap Download the guide, or text (501) 398-9830.'; } });
+})();
+</script>
+</body>
+</html>
