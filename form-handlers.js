@@ -2,7 +2,7 @@
 // Wired to Supabase sellers table and email capture
 
 const SUPABASE_URL = 'https://fzlwkbhpsklsgkinwljt.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bHdrYmhwc2tsc2draW53bGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNTE0MzEsImV4cCI6MjA4NzYyNzQzMX0.lc6A8RCUySU0Hn9MjPcR9rH1c8DjSj_A7MV8JuLvwik';
+const SUPABASE_KEY = 'sb_publishable_CFtMUXYsGLfSb7QT1GEbQg_G_Buhvfx';
 
 // Email capture (for PDF download)
 function captureEmail(e) {
